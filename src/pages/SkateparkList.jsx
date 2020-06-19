@@ -9,6 +9,48 @@ import "react-table-6/react-table.css";
 const Wrapper = styled.div`
   padding: 0 40px 40px 40px;
 `;
+
+const Update = styled.div`
+ color: #ef9b0f,
+ cursor: pointer,
+`;
+
+const Delete = styled.div`
+  color: #ff0000,
+  cursor: pointer,
+`;
+
+class UpdateSkatepark extends Component {
+  updateUser = (event) => {
+    event.preventDefault();
+
+    window.location.href = `/skateparks/update/${this.props.id}`;
+  };
+
+  render() {
+    return <Update onClick={this.updateUser}>Update</Update>;
+  }
+}
+
+class DeleteSkatepark extends Component {
+  deleteUser = (event) => {
+    event.preventDefault();
+
+    if (
+      window.confirm(
+        `Do you want to delete the skatepark with id: ${this.props.id} permanently?`
+      )
+    ) {
+      api.deleteSkateparkById(this.props.id);
+      window.location.reload();
+    }
+  };
+
+  render() {
+    return <Delete onClick={this.deleteUser}>Delete</Delete>;
+  }
+}
+
 class SkateparkList extends Component {
   constructor(props) {
     super(props);
@@ -74,6 +116,28 @@ class SkateparkList extends Component {
         Header: "Rating",
         accessor: "rating",
         filterable: true,
+      },
+      {
+        Header: "",
+        accessor: "",
+        Cell: function (props) {
+          return (
+            <span>
+              <UpdateSkatepark id={props.original._id}></UpdateSkatepark>
+            </span>
+          );
+        },
+      },
+      {
+        Header: "",
+        accessor: "",
+        Cell: function (props) {
+          return (
+            <span>
+              <DeleteSkatepark id={props.original._id}></DeleteSkatepark>
+            </span>
+          );
+        },
       },
     ];
 
