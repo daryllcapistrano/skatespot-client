@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { NavBar } from "../components";
+import { SkateparkList, SkateparkInsert, SkateparkUpdate } from "../pages";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -9,6 +10,15 @@ function App() {
   return (
     <Router>
       <NavBar />
+      <Switch>
+        <Route path="/skateparks/list" exact component={SkateparkList} />
+        <Route path="/skateparks/create" exact component={SkateparkInsert} />
+        <Route
+          path="/skateparks/update/:id"
+          exact
+          component={SkateparkUpdate}
+        />
+      </Switch>
     </Router>
   );
 }
