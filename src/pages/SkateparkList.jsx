@@ -11,12 +11,12 @@ const Wrapper = styled.div`
 `;
 
 const Update = styled.div`
- color: #ef9b0f,
+ color: yellow,
  cursor: pointer,
 `;
 
 const Delete = styled.div`
-  color: #ff0000,
+  color: yellow,
   cursor: pointer,
 `;
 

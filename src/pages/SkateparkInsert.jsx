@@ -58,9 +58,7 @@ class SkateparkInsert extends Component {
 
   handleChangeInputTerrain = async (event) => {
     const terrain = event.target.value;
-    // ? fix to push/concat to terrain array
-    const newTerrain = [...this.state.terrain];
-    console.log(newTerrain, terrain);
+    this.setState({ terrain });
   };
 
   handleChangeInputLocation = async (event) => {
@@ -133,6 +131,7 @@ class SkateparkInsert extends Component {
         rating: "",
         // time: "",
       });
+      window.location.href = `/skateparks/list`;
     });
   };
 

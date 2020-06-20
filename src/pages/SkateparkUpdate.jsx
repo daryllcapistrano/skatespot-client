@@ -133,6 +133,7 @@ class SkateparkUpdate extends Component {
         rating: "",
         // time: "",
       });
+      window.location.href = `/skateparks/list`;
     });
   };
 
@@ -166,7 +167,7 @@ class SkateparkUpdate extends Component {
 
     return (
       <Wrapper>
-        <Title>Create Skatepark</Title>
+        <Title>Update Skatepark</Title>
 
         <Label>Name: </Label>
         <InputText

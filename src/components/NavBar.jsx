@@ -7,13 +7,16 @@ import Links from "./Links";
 const Container = styled.div.attrs({
   className: "container",
 })`
-  height: 150px;
+  max-width: 100%;
+  ${"" /* height: 150px; */}
+  margin: 0;
+  padding: 0;
 `;
 
 const Nav = styled.nav.attrs({
   className: "navbar navbar-expand-lg navbar-dark bg-dark",
 })`
-  margin-bottom: 20 px;
+  margin-bottom: 20px;
 `;
 
 class NavBar extends Component {
