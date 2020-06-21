@@ -35,11 +35,12 @@ const CancelButton = styled.a.attrs({
   margin: 15px 15px 15px 5px;
 `;
 
-class SkateparkInsert extends Component {
+class SkateparkDetail extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      id: this.props.match.params.id,
       name: "",
       terrain: [],
       location: "",
@@ -94,8 +95,9 @@ class SkateparkInsert extends Component {
   //   this.setState({ time });
   // };
 
-  handleIncludeSkatepark = async () => {
+  handleUpdateSkatepark = async () => {
     const {
+      id,
       name,
       terrain,
       location,
@@ -119,8 +121,8 @@ class SkateparkInsert extends Component {
       // time: arrayTime,
     };
 
-    await api.insertSkatepark(payload).then((res) => {
-      window.alert(`Skatepark Added`);
+    await api.updateSkateparkById(id, payload).then((res) => {
+      window.alert(`Skatepark updated successfully`);
       this.setState({
         name: "",
         terrain: [],
@@ -135,6 +137,22 @@ class SkateparkInsert extends Component {
     });
   };
 
+  componentDidMount = async () => {
+    const { id } = this.state;
+    const skatepark = await api.getSkateparkById(id);
+
+    this.setState({
+      name: skatepark.data.data.name,
+      terrain: skatepark.data.data.terrain,
+      location: skatepark.data.data.location,
+      city: skatepark.data.data.city,
+      state: skatepark.data.data.state,
+      country: skatepark.data.data.country,
+      rating: skatepark.data.data.rating,
+      // time: skatepark.data.data.time,
+    });
+  };
+
   render() {
     const {
       name,
@@ -146,9 +164,10 @@ class SkateparkInsert extends Component {
       rating,
       // time,
     } = this.state;
+
     return (
       <Wrapper>
-        <Title>Add Skatepark</Title>
+        <Title>{name} Skatepark Details</Title>
 
         <Label>Name: </Label>
         <InputText
@@ -211,11 +230,11 @@ class SkateparkInsert extends Component {
           onChange={this.handleChangeInputTime}
         /> */}
 
-        <Button onClick={this.handleIncludeSkatepark}>Add Skatepark</Button>
+        <Button onClick={this.handleUpdateSkatepark}>Update Skatepark</Button>
         <CancelButton href={"/skateparks/list"}>Cancel</CancelButton>
       </Wrapper>
     );
   }
 }
 
-export default SkateparkInsert;
+export default SkateparkDetail;

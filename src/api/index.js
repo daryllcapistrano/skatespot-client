@@ -10,6 +10,8 @@ export const updateSkateparkById = (id, payload) =>
   api.put(`/skatepark/${id}`, payload);
 export const deleteSkateparkById = (id) => api.delete(`/skatepark/${id}`);
 export const getSkateparkById = (id) => api.get(`/skatepark/${id}`);
+export const getSkateparkDetailsById = (id) =>
+  api.get(`/skatepark/details/${id}`);
 
 const apis = {
   insertSkatepark,
@@ -17,6 +19,7 @@ const apis = {
   updateSkateparkById,
   deleteSkateparkById,
   getSkateparkById,
+  getSkateparkDetailsById,
 };
 
 export default apis;

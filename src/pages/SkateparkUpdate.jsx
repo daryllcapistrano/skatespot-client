@@ -167,7 +167,7 @@ class SkateparkUpdate extends Component {
 
     return (
       <Wrapper>
-        <Title>Update Skatepark</Title>
+        <Title>Update {name} Skatepark</Title>
 
         <Label>Name: </Label>
         <InputText

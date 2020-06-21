@@ -20,6 +20,11 @@ const Delete = styled.div`
   cursor: pointer,
 `;
 
+const Details = styled.div`
+  color: yellow,
+  cursor: pointer,
+`;
+
 class UpdateSkatepark extends Component {
   updateUser = (event) => {
     event.preventDefault();
@@ -31,6 +36,17 @@ class UpdateSkatepark extends Component {
     return <Update onClick={this.updateUser}>Update</Update>;
   }
 }
+class SkateparkDetail extends Component {
+  updateUser = (event) => {
+    event.preventDefault();
+
+    window.location.href = `/skateparks/details/${this.props.id}`;
+  };
+
+  render() {
+    return <Details onClick={this.updateUser}>Details</Details>;
+  }
+}
 
 class DeleteSkatepark extends Component {
   deleteUser = (event) => {
@@ -38,7 +54,7 @@ class DeleteSkatepark extends Component {
 
     if (
       window.confirm(
-        `Do you want to delete the skatepark with id: ${this.props.id} permanently?`
+        `Do you want to permanently delete the skatepark: ${this.props.name}?`
       )
     ) {
       api.deleteSkateparkById(this.props.id);
@@ -134,7 +150,24 @@ class SkateparkList extends Component {
         Cell: function (props) {
           return (
             <span>
-              <DeleteSkatepark id={props.original._id}></DeleteSkatepark>
+              <DeleteSkatepark
+                name={props.original.name}
+                id={props.original._id}
+              ></DeleteSkatepark>
+            </span>
+          );
+        },
+      },
+      {
+        Header: "",
+        accessor: "",
+        Cell: function (props) {
+          return (
+            <span>
+              <SkateparkDetail
+                name={props.original.name}
+                id={props.original._id}
+              ></SkateparkDetail>
             </span>
           );
         },
@@ -147,18 +180,20 @@ class SkateparkList extends Component {
     }
 
     return (
-      <Wrapper>
-        {showTable && (
-          <ReactTable
-            data={skateparks}
-            columns={columns}
-            loading={isLoading}
-            defaultPageSize={10}
-            showPageSizeOptions={true}
-            minRows={0}
-          />
-        )}
-      </Wrapper>
+      <React.Fragment>
+        <Wrapper>
+          {showTable && (
+            <ReactTable
+              data={skateparks}
+              columns={columns}
+              loading={isLoading}
+              defaultPageSize={10}
+              showPageSizeOptions={true}
+              minRows={0}
+            />
+          )}
+        </Wrapper>
+      </React.Fragment>
     );
   }
 }
