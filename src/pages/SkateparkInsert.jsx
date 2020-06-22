@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import api from "../api";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import styled from "styled-components";
 
 const Title = styled.h1.attrs({
@@ -117,8 +120,22 @@ class SkateparkInsert extends Component {
       image,
     };
 
+    const notifySuccess = () =>
+      toast.success(
+        "Skatepark Added!",
+        { onClose: () => (window.location.href = "/skateparks/list") },
+        {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        }
+      );
+
     await api.insertSkatepark(payload).then((res) => {
-      window.alert(`Skatepark Added`);
       this.setState({
         name: "",
         terrain: [],
@@ -129,7 +146,7 @@ class SkateparkInsert extends Component {
         rating: "",
         image: "",
       });
-      window.location.href = `/skateparks/list`;
+      notifySuccess();
     });
   };
 

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import api from "../api";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import styled from "styled-components";
 
 const Title = styled.h1.attrs({
@@ -121,8 +124,22 @@ class SkateparkUpdate extends Component {
       image,
     };
 
+    const notifySuccess = () =>
+      toast.success(
+        "Skatepark Updated!",
+        { onClose: () => (window.location.href = "/skateparks/list") },
+        {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        }
+      );
+
     await api.updateSkateparkById(id, payload).then((res) => {
-      window.alert(`Skatepark updated successfully`);
       this.setState({
         name: "",
         terrain: [],
@@ -133,7 +150,7 @@ class SkateparkUpdate extends Component {
         rating: "",
         image: "",
       });
-      window.location.href = `/skateparks/list`;
+      notifySuccess();
     });
   };
 
