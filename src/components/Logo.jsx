@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import logo from "../logo.svg";
+import { IconContext } from "react-icons";
+import { FaHubspot } from "react-icons/fa";
 
 const Wrapper = styled.a.attrs({
   className: "navbar-brand",
@@ -11,7 +12,15 @@ class Logo extends Component {
   render() {
     return (
       <Wrapper href="/">
-        <img src={logo} width="50" height="50" alt="skate logo" />
+        <IconContext.Provider
+          value={{
+            color: "yellow",
+            size: "3rem",
+            // className: "global-class-name",
+          }}
+        >
+          <FaHubspot />
+        </IconContext.Provider>
       </Wrapper>
     );
   }
