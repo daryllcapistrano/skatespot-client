@@ -47,7 +47,7 @@ class SkateparkInsert extends Component {
       state: "",
       country: "",
       rating: "",
-      // time: "",
+      iamge: "",
     };
   }
 
@@ -89,10 +89,10 @@ class SkateparkInsert extends Component {
     this.setState({ rating });
   };
 
-  // handleChangeInputTime = async (event) => {
-  //   const time = event.target.value;
-  //   this.setState({ time });
-  // };
+  handleChangeInputImage = async (event) => {
+    const image = event.target.value;
+    this.setState({ image });
+  };
 
   handleIncludeSkatepark = async () => {
     const {
@@ -103,10 +103,8 @@ class SkateparkInsert extends Component {
       state,
       country,
       rating,
-      // time,
+      image,
     } = this.state;
-
-    // const arrayTime = time.split("/");
 
     const payload = {
       name,
@@ -116,7 +114,7 @@ class SkateparkInsert extends Component {
       state,
       country,
       rating,
-      // time: arrayTime,
+      image,
     };
 
     await api.insertSkatepark(payload).then((res) => {
@@ -129,7 +127,7 @@ class SkateparkInsert extends Component {
         state: "",
         country: "",
         rating: "",
-        // time: "",
+        image: "",
       });
       window.location.href = `/skateparks/list`;
     });
@@ -144,7 +142,7 @@ class SkateparkInsert extends Component {
       state,
       country,
       rating,
-      // time,
+      image,
     } = this.state;
     return (
       <Wrapper>
@@ -204,12 +202,12 @@ class SkateparkInsert extends Component {
           onChange={this.handleChangeInputRating}
         />
 
-        {/* <Label>Time: </Label>
+        <Label>Image: </Label>
         <InputText
           type="text"
-          value={time}
-          onChange={this.handleChangeInputTime}
-        /> */}
+          value={image}
+          onChange={this.handleChangeInputImage}
+        />
 
         <Button onClick={this.handleIncludeSkatepark}>Add Skatepark</Button>
         <CancelButton href={"/skateparks/list"}>Cancel</CancelButton>

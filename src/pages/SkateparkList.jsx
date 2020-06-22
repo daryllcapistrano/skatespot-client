@@ -134,6 +134,11 @@ class SkateparkList extends Component {
         filterable: true,
       },
       {
+        Header: "Image",
+        accessor: "image",
+        filterable: true,
+      },
+      {
         Header: "",
         accessor: "",
         Cell: function (props) {

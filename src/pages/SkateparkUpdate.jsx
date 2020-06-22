@@ -48,7 +48,7 @@ class SkateparkUpdate extends Component {
       state: "",
       country: "",
       rating: "",
-      // time: "",
+      image: "",
     };
   }
 
@@ -90,10 +90,10 @@ class SkateparkUpdate extends Component {
     this.setState({ rating });
   };
 
-  // handleChangeInputTime = async (event) => {
-  //   const time = event.target.value;
-  //   this.setState({ time });
-  // };
+  handleChangeInputImage = async (event) => {
+    const image = event.target.value;
+    this.setState({ image });
+  };
 
   handleUpdateSkatepark = async () => {
     const {
@@ -105,7 +105,7 @@ class SkateparkUpdate extends Component {
       state,
       country,
       rating,
-      // time,
+      image,
     } = this.state;
 
     // const arrayTime = time.split("/");
@@ -118,7 +118,7 @@ class SkateparkUpdate extends Component {
       state,
       country,
       rating,
-      // time: arrayTime,
+      image,
     };
 
     await api.updateSkateparkById(id, payload).then((res) => {
@@ -131,7 +131,7 @@ class SkateparkUpdate extends Component {
         state: "",
         country: "",
         rating: "",
-        // time: "",
+        image: "",
       });
       window.location.href = `/skateparks/list`;
     });
@@ -149,7 +149,7 @@ class SkateparkUpdate extends Component {
       state: skatepark.data.data.state,
       country: skatepark.data.data.country,
       rating: skatepark.data.data.rating,
-      // time: skatepark.data.data.time,
+      image: skatepark.data.data.image,
     });
   };
 
@@ -162,7 +162,7 @@ class SkateparkUpdate extends Component {
       state,
       country,
       rating,
-      // time,
+      image,
     } = this.state;
 
     return (
@@ -223,12 +223,12 @@ class SkateparkUpdate extends Component {
           onChange={this.handleChangeInputRating}
         />
 
-        {/* <Label>Time: </Label>
+        <Label>Image: </Label>
         <InputText
           type="text"
-          value={time}
-          onChange={this.handleChangeInputTime}
-        /> */}
+          value={image}
+          onChange={this.handleChangeInputImage}
+        />
 
         <Button onClick={this.handleUpdateSkatepark}>Update Skatepark</Button>
         <CancelButton href={"/skateparks/list"}>Cancel</CancelButton>
