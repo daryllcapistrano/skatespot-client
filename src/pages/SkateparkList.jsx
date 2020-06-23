@@ -198,6 +198,17 @@ class SkateparkList extends Component {
               minRows={0}
             />
           )}
+          {/* 
+            fix below to map over props and render
+           */}
+          {/* <div>
+            {this.state.skateparks.map((name, index) => (
+              <p key={index}>
+                {name.name}
+                {}
+              </p>
+            ))}
+          </div> */}
         </Wrapper>
       </React.Fragment>
     );

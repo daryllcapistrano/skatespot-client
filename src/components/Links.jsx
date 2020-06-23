@@ -17,7 +17,7 @@ const Item = styled.div.attrs({
 class Links extends Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <Link to="/" className="navbar-brand">
           Skatepark and Spot Directory
         </Link>
@@ -35,7 +35,7 @@ class Links extends Component {
             </Item>
           </List>
         </Collapse>
-      </React.Fragment>
+      </>
     );
   }
 }
