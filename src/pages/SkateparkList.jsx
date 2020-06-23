@@ -90,6 +90,7 @@ class SkateparkList extends Component {
 
   render() {
     const { skateparks, isLoading } = this.state;
+    // ! remove console.log in production
     console.log("TCL: SkateparkList -> render -> skateparks", skateparks);
 
     const columns = [

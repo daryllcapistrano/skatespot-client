@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+
+import { ToastContainer, Slide } from "react-toastify";
+
 import { NavBar } from "../components";
 import {
   SkateparkList,
@@ -16,8 +18,9 @@ function App() {
   return (
     <Router>
       <ToastContainer
+        transition={Slide}
         position="top-right"
-        autoClose={1000}
+        autoClose={1500}
         hideProgressBar={true}
         newestOnTop={false}
         closeOnClick
@@ -28,6 +31,7 @@ function App() {
       />
       <NavBar />
       <Switch>
+        <Route path="/" exact component={SkateparkList} />
         <Route path="/skateparks/list" exact component={SkateparkList} />
         <Route path="/skateparks/create" exact component={SkateparkInsert} />
         <Route

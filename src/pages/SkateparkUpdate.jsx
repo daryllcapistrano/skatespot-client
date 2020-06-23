@@ -4,6 +4,9 @@ import api from "../api";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { IconContext } from "react-icons";
+import { FaRegCheckCircle } from "react-icons/fa";
+
 import styled from "styled-components";
 
 const Title = styled.h1.attrs({
@@ -124,13 +127,26 @@ class SkateparkUpdate extends Component {
       image,
     };
 
+    const ToastMessage = () => (
+      <IconContext.Provider
+        value={{
+          color: "white",
+          size: "3rem",
+          // className: "global-class-name",
+        }}
+      >
+        <FaRegCheckCircle />
+        <span style={{ padding: `0 2.5rem` }}>Skatepark Updated</span>
+      </IconContext.Provider>
+    );
+
     const notifySuccess = () =>
       toast.success(
-        "Skatepark Updated!",
+        <ToastMessage />,
         { onClose: () => (window.location.href = "/skateparks/list") },
         {
           position: "top-right",
-          autoClose: 1000,
+          autoClose: 1500,
           hideProgressBar: true,
           closeOnClick: true,
           pauseOnHover: true,

@@ -3,6 +3,8 @@ import api from "../api";
 
 import styled from "styled-components";
 
+import SpotCard from "../components/SpotCard";
+
 const Title = styled.h1.attrs({
   className: "h1",
 })``;
@@ -63,14 +65,24 @@ class SkateparkDetail extends Component {
     return (
       <Wrapper>
         <Title>{name} Skatepark Details</Title>
-        <NameField>{name}</NameField>
+        {/* <NameField>{name}</NameField>
         <h1>{terrain}</h1>
         <h1>{location}</h1>
         <h1>{city}</h1>
         <h1>{state}</h1>
         <h1>{country}</h1>
         <h1>{rating}</h1>
-        <img src={image} alt="park"></img>
+        <img src={image} alt="park"></img> */}
+        <SpotCard
+          name={name}
+          terrain={terrain}
+          location={location}
+          city={city}
+          state={state}
+          country={country}
+          rating={rating}
+          image={image}
+        ></SpotCard>
       </Wrapper>
     );
   }
