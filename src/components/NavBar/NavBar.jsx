@@ -14,9 +14,10 @@ const Container = styled.div.attrs({
 `;
 
 const Nav = styled.nav.attrs({
-  className: "navbar navbar-expand-lg navbar-dark bg-dark",
+  className: "navbar navbar-expand-lg",
 })`
   margin-bottom: 20px;
+  background: linear-gradient(90deg, #1f3d83 0%, #097bbf 100%);
 `;
 
 class NavBar extends Component {

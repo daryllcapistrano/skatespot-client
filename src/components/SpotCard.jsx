@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { UpdateSkatepark, DeleteSkatepark } from "../components/UserActions";
+
 const Card = styled.div.attrs({
   className: "card",
 })`
@@ -33,7 +35,10 @@ const ListGroup = styled.ul.attrs({
 
 const ListItem = styled.li.attrs({
   className: "list-group-item",
-})``;
+})`
+  border: 0;
+  padding: 0;
+`;
 
 function SpotCard(props) {
   return (
@@ -42,16 +47,22 @@ function SpotCard(props) {
         <CardImage src={props.image} alt="skatepark" />
         <CardBody>
           <ListGroup>
-            <ListItem>{props.terrain}</ListItem>
-            <ListItem>{props.location}</ListItem>
             <ListItem>
+              <h1>{props.name}</h1>
+            </ListItem>
+            <ListItem>terrain: {props.terrain}</ListItem>
+            <ListItem>
+              location: {props.location}
+              <br />
               {props.city}, {props.state}
               <br />
               {props.country}
             </ListItem>
-            <ListItem>{props.state}</ListItem>
-            <ListItem>{props.country}</ListItem>
-            <ListItem>{props.rating}</ListItem>
+            <ListItem>rating: {props.rating}</ListItem>
+            <ListItem>
+              <UpdateSkatepark id={props.id} />
+              <DeleteSkatepark id={props.id} />
+            </ListItem>
           </ListGroup>
         </CardBody>
       </Card>

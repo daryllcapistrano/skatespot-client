@@ -31,6 +31,7 @@ class SkateparkDetail extends Component {
     const skatepark = await api.getSkateparkById(id);
 
     this.setState({
+      id: skatepark.data.data._id,
       name: skatepark.data.data.name,
       terrain: skatepark.data.data.terrain,
       location: skatepark.data.data.location,
@@ -44,6 +45,7 @@ class SkateparkDetail extends Component {
 
   render() {
     const {
+      id,
       name,
       terrain,
       location,
@@ -57,6 +59,7 @@ class SkateparkDetail extends Component {
     return (
       <Wrapper>
         <SpotCard
+          id={id}
           name={name}
           terrain={terrain}
           location={location}
@@ -65,7 +68,7 @@ class SkateparkDetail extends Component {
           country={country}
           rating={rating}
           image={image}
-        ></SpotCard>
+        />
       </Wrapper>
     );
   }

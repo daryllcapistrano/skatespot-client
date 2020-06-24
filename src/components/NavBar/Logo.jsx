@@ -14,8 +14,8 @@ class Logo extends Component {
       <Wrapper href="/">
         <IconContext.Provider
           value={{
-            color: "yellow",
-            size: "3rem",
+            color: "#000000",
+            size: "2rem",
             // className: "global-class-name",
           }}
         >

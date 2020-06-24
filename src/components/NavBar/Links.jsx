@@ -14,24 +14,39 @@ const Item = styled.div.attrs({
   className: "collpase navbar-collapse",
 })``;
 
+const BrandLink = styled(Link).attrs({
+  className: "navbar-brand",
+})`
+  color: #ffffff;
+  :hover {
+    color: #ffcc66;
+  }
+`;
+
+const NavLink = styled(Link).attrs({
+  className: "nav-link",
+})`
+  color: #ffffff;
+  :hover {
+    color: #ffcc66;
+  }
+`;
+
 class Links extends Component {
   render() {
     return (
       <>
-        <Link to="/" className="navbar-brand">
-          Skatepark and Spot Directory
-        </Link>
+        <BrandLink to="/">Skatepark and Spot Directory</BrandLink>
         <Collapse>
           <List>
             <Item>
-              <Link to="/skateparks/list" className="nav-link">
-                List Skateparks
-              </Link>
+              <NavLink to="/skateparks/list">List Skateparks</NavLink>
             </Item>
             <Item>
-              <Link to="/skateparks/create" className="nav-link">
-                Create Skatepark
-              </Link>
+              <NavLink to="/skateparks/create">Create Skatepark</NavLink>
+            </Item>
+            <Item>
+              <NavLink to="/skateparks/SpotGrid">Spot Grid</NavLink>
             </Item>
           </List>
         </Collapse>

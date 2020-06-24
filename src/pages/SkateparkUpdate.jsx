@@ -136,7 +136,7 @@ class SkateparkUpdate extends Component {
         }}
       >
         <FaRegCheckCircle />
-        <span style={{ padding: `0 2.5rem` }}>Skatepark Updated</span>
+        <span style={{ padding: `0 2.5rem` }}>Skatepark Added</span>
       </IconContext.Provider>
     );
 

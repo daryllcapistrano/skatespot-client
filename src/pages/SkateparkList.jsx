@@ -1,71 +1,18 @@
 import React, { Component } from "react";
 import ReactTable from "react-table-6";
-import api from "../api";
-
 import styled from "styled-components";
+import api from "../api";
+import {
+  SkateparkDetail,
+  UpdateSkatepark,
+  DeleteSkatepark,
+} from "../components/UserActions";
 
 import "react-table-6/react-table.css";
 
 const Wrapper = styled.div`
   padding: 0 40px 40px 40px;
 `;
-
-const Update = styled.div`
- color: yellow,
- cursor: pointer,
-`;
-
-const Delete = styled.div`
-  color: yellow,
-  cursor: pointer,
-`;
-
-const Details = styled.div`
-  color: yellow,
-  cursor: pointer,
-`;
-
-class UpdateSkatepark extends Component {
-  updateUser = (event) => {
-    event.preventDefault();
-
-    window.location.href = `/skateparks/update/${this.props.id}`;
-  };
-
-  render() {
-    return <Update onClick={this.updateUser}>Update</Update>;
-  }
-}
-class SkateparkDetail extends Component {
-  updateUser = (event) => {
-    event.preventDefault();
-
-    window.location.href = `/skateparks/details/${this.props.id}`;
-  };
-
-  render() {
-    return <Details onClick={this.updateUser}>Details</Details>;
-  }
-}
-
-class DeleteSkatepark extends Component {
-  deleteUser = (event) => {
-    event.preventDefault();
-
-    if (
-      window.confirm(
-        `Do you want to permanently delete the skatepark: ${this.props.name}?`
-      )
-    ) {
-      api.deleteSkateparkById(this.props.id);
-      window.location.reload();
-    }
-  };
-
-  render() {
-    return <Delete onClick={this.deleteUser}>Delete</Delete>;
-  }
-}
 
 class SkateparkList extends Component {
   constructor(props) {
@@ -90,8 +37,6 @@ class SkateparkList extends Component {
 
   render() {
     const { skateparks, isLoading } = this.state;
-    // ! remove console.log in production
-    console.log("TCL: SkateparkList -> render -> skateparks", skateparks);
 
     const columns = [
       {

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { ToastContainer, Slide } from "react-toastify";
 
-import { NavBar } from "../components";
+import { NavBar } from "../components/NavBar";
 import {
   SkateparkList,
   SkateparkInsert,

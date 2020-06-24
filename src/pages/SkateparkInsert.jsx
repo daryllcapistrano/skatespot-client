@@ -3,7 +3,6 @@ import api from "../api";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import { IconContext } from "react-icons";
 import { FaRegCheckCircle } from "react-icons/fa";
 
@@ -53,7 +52,7 @@ class SkateparkInsert extends Component {
       state: "",
       country: "",
       rating: "",
-      iamge: "",
+      image: "",
     };
   }
 
@@ -132,7 +131,7 @@ class SkateparkInsert extends Component {
         }}
       >
         <FaRegCheckCircle />
-        <span style={{ padding: `0 2.5rem` }}>Skatepark Updated</span>
+        <span style={{ padding: `0 2.5rem` }}>Skatepark Created</span>
       </IconContext.Provider>
     );
 
