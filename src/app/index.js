@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ToastContainer, Slide } from "react-toastify";
 
 import { NavBar } from "../components/NavBar";
+
 import {
   SkateparkList,
   SkateparkInsert,
   SkateparkUpdate,
   SkateparkDetail,
+  SpotGrid,
 } from "../pages";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -44,6 +46,7 @@ function App() {
           exact
           component={SkateparkUpdate}
         />
+        <Route path="/skateparks/SpotGrid" exact component={SpotGrid} />
       </Switch>
     </Router>
   );

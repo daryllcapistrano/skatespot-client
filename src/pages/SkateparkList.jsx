@@ -39,21 +39,21 @@ class SkateparkList extends Component {
     const { skateparks, isLoading } = this.state;
 
     const columns = [
-      {
-        Header: "ID",
-        accessor: "_id",
-        filterable: true,
-      },
+      // {
+      //   Header: "ID",
+      //   accessor: "_id",
+      //   filterable: true,
+      // },
       {
         Header: "Name",
         accessor: "name",
         filterable: true,
       },
-      {
-        Header: "Terrain",
-        accessor: "terrain",
-        filterable: true,
-      },
+      // {
+      //   Header: "Terrain",
+      //   accessor: "terrain",
+      //   filterable: true,
+      // },
       {
         Header: "Location",
         accessor: "location",
@@ -69,11 +69,11 @@ class SkateparkList extends Component {
         accessor: "state",
         filterable: true,
       },
-      {
-        Header: "Country",
-        accessor: "country",
-        filterable: true,
-      },
+      // {
+      //   Header: "Country",
+      //   accessor: "country",
+      //   filterable: true,
+      // },
       {
         Header: "Rating",
         accessor: "rating",
@@ -143,17 +143,6 @@ class SkateparkList extends Component {
               minRows={0}
             />
           )}
-          {/* 
-            fix below to map over props and render
-           */}
-          {/* <div>
-            {this.state.skateparks.map((name, index) => (
-              <p key={index}>
-                {name.name}
-                {}
-              </p>
-            ))}
-          </div> */}
         </Wrapper>
       </React.Fragment>
     );
