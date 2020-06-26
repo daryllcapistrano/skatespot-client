@@ -4,8 +4,18 @@ import api from "../api";
 
 import SpotCard from "../components/SpotCard";
 
-const Wrapper = styled.div`
-  padding: 0 40px 40px 40px;
+const Wrapper = styled.div.attrs({ className: "container-fluid" })`
+  padding: 0;
+`;
+
+const ContainerRow = styled.div.attrs({
+  className: "row no-gutters",
+})``;
+
+const ContainerCol = styled.div.attrs({
+  className: "col-sm-4",
+})`
+  padding: 0;
 `;
 
 class SpotGrid extends Component {
@@ -36,20 +46,24 @@ class SpotGrid extends Component {
     return (
       <React.Fragment>
         <Wrapper>
-          {this.state.skateparks.map((skatepark, index) => (
-            <SpotCard
-              key={index}
-              id={skatepark._id}
-              image={skatepark.image}
-              name={skatepark.name}
-              terrain={skatepark.terrain}
-              location={skatepark.location}
-              city={skatepark.city}
-              state={skatepark.state}
-              country={skatepark.country}
-              rating={skatepark.rating}
-            />
-          ))}
+          <ContainerRow>
+            {this.state.skateparks.map((skatepark, index) => (
+              <ContainerCol>
+                <SpotCard
+                  key={index}
+                  id={skatepark._id}
+                  image={skatepark.image}
+                  name={skatepark.name}
+                  terrain={skatepark.terrain}
+                  location={skatepark.location}
+                  city={skatepark.city}
+                  state={skatepark.state}
+                  country={skatepark.country}
+                  rating={skatepark.rating}
+                />
+              </ContainerCol>
+            ))}
+          </ContainerRow>
         </Wrapper>
       </React.Fragment>
     );

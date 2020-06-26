@@ -6,9 +6,9 @@ import { UpdateSkatepark, DeleteSkatepark } from "../components/UserActions";
 const Card = styled.div.attrs({
   className: "card",
 })`
-  width: 20rem;
+  width: 100%;
+  height: 550px;
   display: block;
-  margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #fff;
   border-radius: 2px;
