@@ -1,18 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-const Collapse = styled.div.attrs({
-  className: "collapse navbar-collapse",
-})``;
-
-const List = styled.div.attrs({
-  className: "navbar-nav mr-auto",
-})``;
-
-const Item = styled.div.attrs({
-  className: "collpase navbar-collapse",
-})``;
+import { IconContext } from "react-icons";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const BrandLink = styled(Link).attrs({
   className: "navbar-brand",
@@ -22,6 +12,29 @@ const BrandLink = styled(Link).attrs({
     color: #ffcc66;
   }
 `;
+
+const HamburgerButton = styled.button.attrs((props) => ({
+  className: "navbar-toggler",
+  type: "button",
+  dataToggle: "collapse",
+  dataTarget: "#linkItems",
+  ariaControls: "linkItems",
+  ariaExpanded: "false",
+  ariaLabel: "Toggle navigation",
+}))``;
+
+const Collapse = styled.div.attrs({
+  className: "collapse navbar-collapse",
+  id: "linkItems",
+})``;
+
+const List = styled.ul.attrs({
+  className: "navbar-nav mr-auto mt-2 mt-lg-0",
+})``;
+
+const NavItem = styled.li.attrs({
+  className: "nav-item",
+})``;
 
 const NavLink = styled(Link).attrs({
   className: "nav-link",
@@ -37,17 +50,28 @@ class Links extends Component {
     return (
       <>
         <BrandLink to="/">Skatepark and Spot Directory</BrandLink>
+        <HamburgerButton>
+          <IconContext.Provider
+            value={{
+              color: "#000000",
+              size: "2rem",
+              // className: "global-class-name",
+            }}
+          >
+            <GiHamburgerMenu />
+          </IconContext.Provider>
+        </HamburgerButton>
         <Collapse>
           <List>
-            <Item>
+            <NavItem>
               <NavLink to="/skateparks/list">List Skateparks</NavLink>
-            </Item>
-            <Item>
+            </NavItem>
+            <NavItem>
               <NavLink to="/skateparks/create">Create Skatepark</NavLink>
-            </Item>
-            <Item>
+            </NavItem>
+            <NavItem>
               <NavLink to="/skateparks/SpotGrid">Spot Grid</NavLink>
-            </Item>
+            </NavItem>
           </List>
         </Collapse>
       </>

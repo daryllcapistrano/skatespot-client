@@ -1,3 +1,3 @@
 # TODO
 
-1. make new Toast Component
+1.  fix hamburger menu to open and close the collapse menu
