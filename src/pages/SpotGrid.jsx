@@ -4,6 +4,10 @@ import api from "../api";
 
 import SpotCard from "../components/SpotCard";
 
+const Wrapper = styled.div`
+  padding: 2rem;
+`;
+
 const ContainerRow = styled.div.attrs({
   className: "row no-gutters",
 })``;
@@ -39,25 +43,27 @@ class SpotGrid extends Component {
     console.log(skateparks);
 
     return (
-      <React.Fragment>
-        <ContainerRow>
-          {this.state.skateparks.map((skatepark, index) => (
-            <ContainerCol key={index}>
-              <SpotCard
-                id={skatepark._id}
-                image={skatepark.image}
-                name={skatepark.name}
-                terrain={skatepark.terrain}
-                location={skatepark.location}
-                city={skatepark.city}
-                state={skatepark.state}
-                country={skatepark.country}
-                rating={skatepark.rating}
-              />
-            </ContainerCol>
-          ))}
-        </ContainerRow>
-      </React.Fragment>
+      <>
+        <Wrapper>
+          <ContainerRow>
+            {this.state.skateparks.map((skatepark, index) => (
+              <ContainerCol key={index}>
+                <SpotCard
+                  id={skatepark._id}
+                  image={skatepark.image}
+                  name={skatepark.name}
+                  terrain={skatepark.terrain}
+                  location={skatepark.location}
+                  city={skatepark.city}
+                  state={skatepark.state}
+                  country={skatepark.country}
+                  rating={skatepark.rating}
+                />
+              </ContainerCol>
+            ))}
+          </ContainerRow>
+        </Wrapper>
+      </>
     );
   }
 }

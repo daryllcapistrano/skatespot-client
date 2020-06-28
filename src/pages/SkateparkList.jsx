@@ -11,7 +11,7 @@ import {
 import "react-table-6/react-table.css";
 
 const Wrapper = styled.div`
-  padding: 0 40px 40px 40px;
+  padding: 2rem;
 `;
 
 class SkateparkList extends Component {

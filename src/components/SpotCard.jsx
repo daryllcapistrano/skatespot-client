@@ -103,11 +103,7 @@ function SpotCard(props) {
             <ListItem>
               <UserActions>
                 <UpdateSkatepark id={props.id} />
-              </UserActions>
-              <UserActions>
                 <DeleteSkatepark id={props.id} />
-              </UserActions>
-              <UserActions>
                 <SkateparkDetail id={props.id} />
               </UserActions>
             </ListItem>

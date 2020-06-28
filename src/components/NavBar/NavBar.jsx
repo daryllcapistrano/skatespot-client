@@ -36,7 +36,7 @@ const Collapse = styled.div.attrs({
 `;
 
 const NavList = styled.ul.attrs({
-  className: "navbar-nav mr-auto mt-2 mt-lg-0",
+  className: "navbar-nav my-2 my-lg-0",
 })``;
 
 const NavItem = styled.li.attrs({
@@ -57,41 +57,36 @@ class NavBar extends Component {
     return (
       // <Container>
       <Nav>
-        <div>
-          <Logo />
-          <TitleLink to="/">SkateHereApp</TitleLink>
-        </div>
-        <div>
-          <HamburgerButton
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapseThis"
-            aria-controls="collapseThis"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+        <Logo />
+        <TitleLink to="/">SkateHereApp</TitleLink>
+
+        <HamburgerButton
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseThis"
+          aria-controls="collapseThis"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <IconContext.Provider
+            value={{
+              color: "#000000",
+              size: "2rem",
+            }}
           >
-            <IconContext.Provider
-              value={{
-                color: "#000000",
-                size: "2rem",
-              }}
-            >
-              <GiHamburgerMenu />
-            </IconContext.Provider>
-          </HamburgerButton>
-          <span>
-            <Collapse id="collapseThis">
-              <NavList>
-                <NavItem>
-                  <NavLink to="/skateparks/list">List Skateparks</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/skateparks/create">Create Skatepark</NavLink>
-                </NavItem>
-              </NavList>
-            </Collapse>
-          </span>
-        </div>
+            <GiHamburgerMenu />
+          </IconContext.Provider>
+        </HamburgerButton>
+        <Collapse id="collapseThis">
+          <NavList>
+            <NavItem>
+              <NavLink to="/skateparks/create">Add A New Spot</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/skateparks/list">List Skateparks</NavLink>
+            </NavItem>
+          </NavList>
+        </Collapse>
       </Nav>
       // </Container>
     );
