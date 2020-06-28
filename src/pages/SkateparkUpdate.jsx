@@ -16,7 +16,9 @@ const Title = styled.h1.attrs({
 const Wrapper = styled.div.attrs({
   className: "form-group",
 })`
-  margin: 0 30px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  width: 400px;
 `;
 
 const Label = styled.label`
@@ -114,8 +116,6 @@ class SkateparkUpdate extends Component {
       image,
     } = this.state;
 
-    // const arrayTime = time.split("/");
-
     const payload = {
       name,
       terrain,
@@ -132,7 +132,6 @@ class SkateparkUpdate extends Component {
         value={{
           color: "white",
           size: "3rem",
-          // className: "global-class-name",
         }}
       >
         <FaRegCheckCircle />
@@ -143,7 +142,10 @@ class SkateparkUpdate extends Component {
     const notifySuccess = () =>
       toast.success(
         <ToastMessage />,
-        { onClose: () => (window.location.href = "/skateparks/list") },
+        {
+          onClose: () =>
+            (window.location.href = "/skateparks/details/" + this.state.id),
+        },
         {
           position: "top-right",
           autoClose: 1500,

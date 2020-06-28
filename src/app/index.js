@@ -33,7 +33,7 @@ function App() {
       />
       <NavBar />
       <Switch>
-        <Route path="/" exact component={SkateparkList} />
+        <Route path="/" exact component={SpotGrid} />
         <Route path="/skateparks/list" exact component={SkateparkList} />
         <Route path="/skateparks/create" exact component={SkateparkInsert} />
         <Route
@@ -46,7 +46,6 @@ function App() {
           exact
           component={SkateparkUpdate}
         />
-        <Route path="/skateparks/SpotGrid" exact component={SpotGrid} />
       </Switch>
     </Router>
   );

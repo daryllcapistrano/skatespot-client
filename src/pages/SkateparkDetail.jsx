@@ -6,7 +6,9 @@ import styled from "styled-components";
 import SpotCard from "../components/SpotCard";
 
 const Wrapper = styled.div`
-  margin: 0 30px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  width: 400px;
 `;
 
 class SkateparkDetail extends Component {

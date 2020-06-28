@@ -79,19 +79,18 @@ class NavBar extends Component {
               <GiHamburgerMenu />
             </IconContext.Provider>
           </HamburgerButton>
-          <Collapse id="collapseThis">
-            <NavList>
-              <NavItem>
-                <NavLink to="/skateparks/list">List Skateparks</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/skateparks/create">Create Skatepark</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/skateparks/SpotGrid">Spot Grid</NavLink>
-              </NavItem>
-            </NavList>
-          </Collapse>
+          <span>
+            <Collapse id="collapseThis">
+              <NavList>
+                <NavItem>
+                  <NavLink to="/skateparks/list">List Skateparks</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/skateparks/create">Create Skatepark</NavLink>
+                </NavItem>
+              </NavList>
+            </Collapse>
+          </span>
         </div>
       </Nav>
       // </Container>

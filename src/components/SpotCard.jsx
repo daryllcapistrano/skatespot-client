@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { UpdateSkatepark, DeleteSkatepark } from "../components/UserActions";
+import {
+  UpdateSkatepark,
+  DeleteSkatepark,
+  SkateparkDetail,
+} from "../components/UserActions";
 
 import { IconContext } from "react-icons";
 import { GiRoundStar } from "react-icons/gi";
@@ -102,6 +106,9 @@ function SpotCard(props) {
               </UserActions>
               <UserActions>
                 <DeleteSkatepark id={props.id} />
+              </UserActions>
+              <UserActions>
+                <SkateparkDetail id={props.id} />
               </UserActions>
             </ListItem>
           </ListGroup>

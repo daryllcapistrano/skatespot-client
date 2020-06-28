@@ -19,7 +19,6 @@ class SpotGrid extends Component {
     super(props);
     this.state = {
       skateparks: [],
-      columns: [],
       isLoading: false,
     };
 
