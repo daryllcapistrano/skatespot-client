@@ -14,7 +14,7 @@ const Card = styled.div.attrs({
   className: "card",
 })`
   width: 100%;
-  height: 550px;
+  height: 450px;
   display: block;
   line-height: 1.42857143;
   background-color: #fff;
@@ -44,13 +44,16 @@ const ListItem = styled.li.attrs({
   padding: 0;
 `;
 
-const ListItemHeader = styled.p.attrs({
+const ListItemHeader = styled.small.attrs({
   className: "text-muted m-0 text-capitalize",
 })``;
 
 const UserActions = styled.div.attrs({
   className: "d-inline m-0 text-center",
-})``;
+})`
+  margin: 0 auto;
+  padding: 0.5rem;
+`;
 
 const RatingContainer = styled.div`
   position: absolute;
@@ -60,7 +63,7 @@ const RatingContainer = styled.div`
   margin: 0.5rem;
 `;
 
-const RatingNumber = styled.span`
+const RatingNumber = styled.h5`
   position: absolute;
   right: 25px;
   padding-top: 2.5px;
@@ -85,28 +88,27 @@ function SpotCard(props) {
         <CardBody>
           <ListGroup>
             <ListItem>
-              <ListItemHeader>name: </ListItemHeader>
-              <h1>{props.name}</h1>
+              <h3>{props.name}</h3>
             </ListItem>
             <ListItem>
               <ListItemHeader>terrain: </ListItemHeader>
-              <p>{props.terrain}</p>
+              <br />
+              {props.terrain}
             </ListItem>
             <ListItem>
               <ListItemHeader>location: </ListItemHeader>
+              <br />
               {props.location}
               <br />
               {props.city}, {props.state}
               <br />
               {props.country}
             </ListItem>
-            <ListItem>
-              <UserActions>
-                <UpdateSkatepark id={props.id} />
-                <DeleteSkatepark id={props.id} />
-                <SkateparkDetail id={props.id} />
-              </UserActions>
-            </ListItem>
+            <UserActions>
+              <UpdateSkatepark id={props.id} />
+              <DeleteSkatepark id={props.id} />
+              <SkateparkDetail id={props.id} />
+            </UserActions>
           </ListGroup>
         </CardBody>
       </Card>

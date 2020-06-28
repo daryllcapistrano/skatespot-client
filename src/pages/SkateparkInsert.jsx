@@ -129,7 +129,6 @@ class SkateparkInsert extends Component {
         value={{
           color: "white",
           size: "3rem",
-          // className: "global-class-name",
         }}
       >
         <FaRegCheckCircle />

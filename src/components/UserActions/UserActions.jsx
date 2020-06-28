@@ -11,16 +11,22 @@ import { FaRegCheckCircle } from "react-icons/fa";
 const Update = styled.div`
   color: #9999cc;
   cursor: pointer;
+  display: inline;
+  padding: 0.5rem;
 `;
 
 const Delete = styled.div`
   color: #9999cc;
   cursor: pointer;
+  display: inline;
+  padding: 0.5rem;
 `;
 
 const Details = styled.div`
   color: #9999cc;
   cursor: pointer;
+  display: inline;
+  padding: 0.5rem;
 `;
 
 const ToastMessage = () => (
