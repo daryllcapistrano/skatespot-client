@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import api from "../api";
-
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { IconContext } from "react-icons";
-import { FaRegCheckCircle } from "react-icons/fa";
+import { notifyCreateSuccess } from "../components/Toast";
 
 import styled from "styled-components";
 
@@ -124,33 +120,6 @@ class SkateparkInsert extends Component {
       image,
     };
 
-    const ToastMessage = () => (
-      <IconContext.Provider
-        value={{
-          color: "white",
-          size: "3rem",
-        }}
-      >
-        <FaRegCheckCircle />
-        <span style={{ padding: `0 2.5rem` }}>Skatepark Created</span>
-      </IconContext.Provider>
-    );
-
-    const notifySuccess = () =>
-      toast.success(
-        <ToastMessage />,
-        { onClose: () => (window.location.href = "/skateparks/list") },
-        {
-          position: "top-right",
-          autoClose: 1500,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        }
-      );
-
     await api.insertSkatepark(payload).then((res) => {
       this.setState({
         name: "",
@@ -162,7 +131,7 @@ class SkateparkInsert extends Component {
         rating: "",
         image: "",
       });
-      notifySuccess();
+      notifyCreateSuccess();
     });
   };
 
@@ -243,7 +212,7 @@ class SkateparkInsert extends Component {
         />
 
         <Button onClick={this.handleIncludeSkatepark}>Add Skatepark</Button>
-        <CancelButton href={"/skateparks/list"}>Cancel</CancelButton>
+        <CancelButton href={"/"}>Cancel</CancelButton>
       </Wrapper>
     );
   }

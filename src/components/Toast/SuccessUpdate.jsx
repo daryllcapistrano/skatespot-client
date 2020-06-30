@@ -14,11 +14,11 @@ const ToastMessage = () => (
     }}
   >
     <FaRegCheckCircle />
-    <ToastText>Skatepark Deleted</ToastText>
+    <ToastText>Skatepark Added</ToastText>
   </IconContext.Provider>
 );
 
-export const notifyDeleteSuccess = () =>
+export const notifyUpdateSuccess = () =>
   toast.success(
     <ToastMessage />,
     { onClose: () => (window.location.href = "/") },

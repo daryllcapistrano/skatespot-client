@@ -1,4 +1,6 @@
 import React from "react";
+import { IconContext } from "react-icons";
+import { GiRoundStar } from "react-icons/gi";
 
 import {
   UpdateSkatepark,
@@ -18,9 +20,6 @@ import {
   RatingContainer,
   RatingNumber,
 } from "./styles";
-
-import { IconContext } from "react-icons";
-import { GiRoundStar } from "react-icons/gi";
 
 function SpotCard(props) {
   return (

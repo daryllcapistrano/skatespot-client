@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import api from "../api";
-
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
-import { IconContext } from "react-icons";
-import { FaRegCheckCircle } from "react-icons/fa";
+import { notifyUpdateSuccess } from "../components/Toast";
 
 import styled from "styled-components";
 
@@ -127,36 +122,6 @@ class SkateparkUpdate extends Component {
       image,
     };
 
-    const ToastMessage = () => (
-      <IconContext.Provider
-        value={{
-          color: "white",
-          size: "3rem",
-        }}
-      >
-        <FaRegCheckCircle />
-        <span style={{ padding: `0 2.5rem` }}>Skatepark Added</span>
-      </IconContext.Provider>
-    );
-
-    const notifySuccess = () =>
-      toast.success(
-        <ToastMessage />,
-        {
-          onClose: () =>
-            (window.location.href = "/skateparks/details/" + this.state.id),
-        },
-        {
-          position: "top-right",
-          autoClose: 1500,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        }
-      );
-
     await api.updateSkateparkById(id, payload).then((res) => {
       this.setState({
         name: "",
@@ -168,7 +133,7 @@ class SkateparkUpdate extends Component {
         rating: "",
         image: "",
       });
-      notifySuccess();
+      notifyUpdateSuccess();
     });
   };
 

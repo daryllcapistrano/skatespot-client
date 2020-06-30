@@ -6,7 +6,6 @@ import { Update, Delete, Details } from "./styles";
 class UpdateSkatepark extends Component {
   updateUser = (event) => {
     event.preventDefault();
-
     window.location.href = `/skateparks/update/${this.props.id}`;
   };
 
@@ -17,7 +16,6 @@ class UpdateSkatepark extends Component {
 class SkateparkDetail extends Component {
   updateUser = (event) => {
     event.preventDefault();
-
     window.location.href = `/skateparks/details/${this.props.id}`;
   };
 
