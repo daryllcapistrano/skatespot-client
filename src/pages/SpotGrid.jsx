@@ -4,19 +4,17 @@ import api from "../api";
 
 import SpotCard from "../components/SpotCard";
 
-const Wrapper = styled.div`
-  padding: 2rem;
-`;
+const Wrapper = styled.div.attrs({
+  className: "container py-4",
+})``;
 
 const ContainerRow = styled.div.attrs({
-  className: "row no-gutters",
+  className: "row",
 })``;
 
 const ContainerCol = styled.div.attrs({
-  className: "col-sm-4",
-})`
-  padding: 0;
-`;
+  className: "col-md-4 py-3",
+})``;
 
 class SpotGrid extends Component {
   constructor(props) {
