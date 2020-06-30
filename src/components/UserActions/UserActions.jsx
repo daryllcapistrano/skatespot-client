@@ -1,41 +1,7 @@
 import React, { Component } from "react";
 import api from "../../api";
-
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
-import { IconContext } from "react-icons";
-import { FaRegCheckCircle } from "react-icons/fa";
-
+import { notifyDeleteSuccess } from "../Toast";
 import { Update, Delete, Details } from "./styles";
-
-const ToastMessage = () => (
-  <IconContext.Provider
-    value={{
-      color: "white",
-      size: "3rem",
-      // className: "global-class-name",
-    }}
-  >
-    <FaRegCheckCircle />
-    <span style={{ padding: `0 2.5rem` }}>Skatepark Deleted</span>
-  </IconContext.Provider>
-);
-
-const notifySuccess = () =>
-  toast.success(
-    <ToastMessage />,
-    { onClose: () => (window.location.href = "/skateparks/list") },
-    {
-      position: "top-right",
-      autoClose: 1500,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    }
-  );
 
 class UpdateSkatepark extends Component {
   updateUser = (event) => {
@@ -70,7 +36,7 @@ class DeleteSkatepark extends Component {
       )
     ) {
       api.deleteSkateparkById(this.props.id);
-      notifySuccess();
+      notifyDeleteSuccess();
     }
   };
 
