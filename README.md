@@ -1,3 +1,5 @@
 # TODO
 
-1.  fix hamburger menu to open and close the collapse menu
+1. change all margin and padding styles to use bootstrap utilities
+2. seperatation of concerns: styled components into seperate files
+3. convert class components to function components

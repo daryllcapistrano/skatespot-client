@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import api from "../api";
 
-import SpotCard from "../components/SpotCard";
+import { SpotCard } from "../components/Cards";
 
 const Wrapper = styled.div.attrs({
   className: "container py-4",
@@ -13,7 +13,7 @@ const ContainerRow = styled.div.attrs({
 })``;
 
 const ContainerCol = styled.div.attrs({
-  className: "col-md-4 py-3",
+  className: "col-lg-4 col-md-6 py-3",
 })``;
 
 class SpotGrid extends Component {

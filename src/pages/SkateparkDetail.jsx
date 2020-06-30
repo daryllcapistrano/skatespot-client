@@ -3,7 +3,7 @@ import api from "../api";
 
 import styled from "styled-components";
 
-import SpotCard from "../components/SpotCard";
+import { SpotCard } from "../components/Cards";
 
 const Wrapper = styled.div`
   margin: 0 auto;

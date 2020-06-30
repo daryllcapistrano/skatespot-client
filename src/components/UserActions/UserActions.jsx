@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import api from "../../api";
 
 import { toast } from "react-toastify";
@@ -8,26 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { IconContext } from "react-icons";
 import { FaRegCheckCircle } from "react-icons/fa";
 
-const Update = styled.div`
-  color: #9999cc;
-  cursor: pointer;
-  display: inline;
-  padding: 0.5rem;
-`;
-
-const Delete = styled.div`
-  color: #9999cc;
-  cursor: pointer;
-  display: inline;
-  padding: 0.5rem;
-`;
-
-const Details = styled.div`
-  color: #9999cc;
-  cursor: pointer;
-  display: inline;
-  padding: 0.5rem;
-`;
+import { Update, Delete, Details } from "./styles";
 
 const ToastMessage = () => (
   <IconContext.Provider
