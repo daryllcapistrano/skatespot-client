@@ -1,22 +1,25 @@
 import styled from "styled-components";
 
-export const Update = styled.div`
+export const Update = styled.div.attrs({
+  className: "p-2",
+})`
   color: #9999cc;
   cursor: pointer;
   display: inline;
-  padding: 0.5rem;
 `;
 
-export const Delete = styled.div`
+export const Delete = styled.div.attrs({
+  className: "p-2",
+})`
   color: #9999cc;
   cursor: pointer;
   display: inline;
-  padding: 0.5rem;
 `;
 
-export const Details = styled.div`
+export const Details = styled.div.attrs({
+  className: "p-2",
+})`
   color: #9999cc;
   cursor: pointer;
   display: inline;
-  padding: 0.5rem;
 `;

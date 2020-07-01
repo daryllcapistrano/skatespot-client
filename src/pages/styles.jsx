@@ -14,9 +14,9 @@ export const ContainerCol = styled.div.attrs({
 })``;
 
 // SkateparkDetail Styles
-export const DetailWrapper = styled.div`
-  margin: 0 auto;
-  padding: 2.5rem 0;
+export const DetailWrapper = styled.div.attrs({
+  className: "m-auto py-4",
+})`
   width: 400px;
 `;
 
@@ -26,31 +26,23 @@ export const Title = styled.h1.attrs({
 })``;
 
 export const PageWrapper = styled.div.attrs({
-  className: "form-group",
+  className: "form-group m-auto py-4",
 })`
-  margin: 0 auto;
-  padding: 2.5rem 0;
   width: 400px;
 `;
 
-export const Label = styled.label`
-  margin: 5px;
-`;
+export const Label = styled.label.attrs({
+  className: "m-1",
+})``;
 
 export const InputText = styled.input.attrs({
-  className: "form-control",
-})`
-  margin: 5px;
-`;
+  className: "form-control m-1",
+})``;
 
 export const Button = styled.button.attrs({
-  className: `btn btn-primary`,
-})`
-  margin: 15px 15px 15px 5px;
-`;
+  className: `btn btn-primary m-2`,
+})``;
 
 export const CancelButton = styled.a.attrs({
-  className: `btn btn-danger`,
-})`
-  margin: 15px 15px 15px 5px;
-`;
+  className: `btn btn-danger m-2`,
+})``;
