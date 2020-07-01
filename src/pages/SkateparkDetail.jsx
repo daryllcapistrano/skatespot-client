@@ -1,15 +1,8 @@
 import React, { Component } from "react";
 import api from "../api";
-
-import styled from "styled-components";
+import { DetailWrapper } from "./styles";
 
 import { SpotCard } from "../components/Cards";
-
-const Wrapper = styled.div`
-  margin: 0 auto;
-  padding: 2.5rem 0;
-  width: 400px;
-`;
 
 class SkateparkDetail extends Component {
   constructor(props) {
@@ -59,7 +52,7 @@ class SkateparkDetail extends Component {
     } = this.state;
 
     return (
-      <Wrapper>
+      <DetailWrapper>
         <SpotCard
           id={id}
           name={name}
@@ -71,7 +64,7 @@ class SkateparkDetail extends Component {
           rating={rating}
           image={image}
         />
-      </Wrapper>
+      </DetailWrapper>
     );
   }
 }

@@ -1,42 +1,15 @@
 import React, { Component } from "react";
 import api from "../api";
 import { notifyUpdateSuccess } from "../components/Toast";
-
-import styled from "styled-components";
-
-const Title = styled.h1.attrs({
-  className: "h1",
-})``;
-
-const Wrapper = styled.div.attrs({
-  className: "form-group",
-})`
-  margin: 0 auto;
-  padding: 2.5rem 0;
-  width: 400px;
-`;
-
-const Label = styled.label`
-  margin: 5px;
-`;
-
-const InputText = styled.input.attrs({
-  className: "form-control",
-})`
-  margin: 5px;
-`;
-
-const Button = styled.button.attrs({
-  className: `btn btn-primary`,
-})`
-  margin: 15px 15px 15px 5px;
-`;
-
-const CancelButton = styled.a.attrs({
-  className: `btn btn-danger`,
-})`
-  margin: 15px 15px 15px 5px;
-`;
+// Style Imports
+import {
+  Title,
+  PageWrapper,
+  Label,
+  InputText,
+  Button,
+  CancelButton,
+} from "./styles";
 
 class SkateparkUpdate extends Component {
   constructor(props) {
@@ -166,7 +139,7 @@ class SkateparkUpdate extends Component {
     } = this.state;
 
     return (
-      <Wrapper>
+      <PageWrapper>
         <Title>Update {name} Skatepark</Title>
 
         <Label>Name: </Label>
@@ -232,7 +205,7 @@ class SkateparkUpdate extends Component {
 
         <Button onClick={this.handleUpdateSkatepark}>Update Skatepark</Button>
         <CancelButton href={"/skateparks/list"}>Cancel</CancelButton>
-      </Wrapper>
+      </PageWrapper>
     );
   }
 }

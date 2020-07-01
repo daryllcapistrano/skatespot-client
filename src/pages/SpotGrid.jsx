@@ -1,20 +1,8 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import api from "../api";
-
 import { SpotCard } from "../components/Cards";
-
-const Wrapper = styled.div.attrs({
-  className: "container py-4",
-})``;
-
-const ContainerRow = styled.div.attrs({
-  className: "row",
-})``;
-
-const ContainerCol = styled.div.attrs({
-  className: "col-lg-4 col-md-6 py-3",
-})``;
+// Style Imports
+import { Wrapper, ContainerRow, ContainerCol } from "./styles";
 
 class SpotGrid extends Component {
   constructor(props) {

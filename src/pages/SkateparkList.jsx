@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import ReactTable from "react-table-6";
-import styled from "styled-components";
 import api from "../api";
 import {
   SkateparkDetail,
   UpdateSkatepark,
   DeleteSkatepark,
 } from "../components/UserActions";
-
+// Style Imports
+import { Wrapper } from "./styles";
 import "react-table-6/react-table.css";
-
-const Wrapper = styled.div`
-  padding: 2rem;
-`;
 
 class SkateparkList extends Component {
   constructor(props) {
