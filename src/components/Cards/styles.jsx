@@ -4,6 +4,8 @@ export const Card = styled.div.attrs({
   className: "card",
 })`
   display: inline-block;
+  border: 0;
+  border-radius: 0;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -16,8 +18,8 @@ export const Card = styled.div.attrs({
     :hover,
     :focus,
     :active {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
+      -webkit-transform: scale(1.03);
+      transform: scale(1.03);
     }
   }
 `;

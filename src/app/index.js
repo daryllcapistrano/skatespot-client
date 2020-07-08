@@ -1,9 +1,10 @@
 import React from "react";
+import { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import { ToastContainer, Slide } from "react-toastify";
-
 import { NavBar } from "../components/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
 
 import {
   SkateparkList,
@@ -11,14 +12,24 @@ import {
   SkateparkUpdate,
   SkateparkDetail,
   SpotGrid,
+  // SkateparkListTest,
 } from "../pages";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "react-toastify/dist/ReactToastify.css";
+const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap');
+  body {
+    ${
+      "" /* font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'IBM Plex Sans Condensed', sans-serif; */
+    }
+    font-family: 'IBM Plex Serif', serif;
+  }
+`;
 
 function App() {
   return (
     <Router>
+      <GlobalStyles />
       <ToastContainer
         transition={Slide}
         position="top-right"

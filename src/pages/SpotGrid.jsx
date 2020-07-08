@@ -25,9 +25,6 @@ class SpotGrid extends Component {
   }
 
   render() {
-    const { skateparks } = this.state;
-    console.log(skateparks);
-
     return (
       <>
         <Wrapper>

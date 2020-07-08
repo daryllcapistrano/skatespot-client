@@ -9,7 +9,6 @@ export const Nav = styled.nav.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`
   justify-content: space-between;
-  background: linear-gradient(90deg, #1f3d83 0%, #097bbf 100%);
 `;
 
 export const TitleLink = styled(Link).attrs({
