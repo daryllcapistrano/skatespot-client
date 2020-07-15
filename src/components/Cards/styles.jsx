@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Card = styled.div.attrs({
   className: "card",
 })`
-  display: inline-block;
+  ${"" /* display: inline-block; */}
   border: 0;
   border-radius: 0;
   vertical-align: middle;
@@ -15,11 +15,9 @@ export const Card = styled.div.attrs({
   -webkit-transition-property: transform;
   transition-property: transform;
   @media screen and (min-width: 768px) {
-    :hover,
-    :focus,
-    :active {
-      -webkit-transform: scale(1.03);
-      transform: scale(1.03);
+    :hover {
+      -webkit-transform: scale(1.01);
+      transform: scale(1.01);
     }
   }
 `;

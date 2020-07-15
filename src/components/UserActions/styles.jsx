@@ -16,10 +16,6 @@ export const Delete = styled.div.attrs({
   display: inline;
 `;
 
-export const Details = styled.div.attrs({
-  className: "p-2",
-})`
-  color: #9999cc;
+export const Details = styled.a.attrs({})`
   cursor: pointer;
-  display: inline;
 `;

@@ -25,42 +25,44 @@ function SpotCard(props) {
   return (
     <>
       <Card>
-        <CardImage src={props.image} alt="skatepark" />
-        <RatingContainer>
-          <RatingNumber>{props.rating}</RatingNumber>
-          <IconContext.Provider
-            value={{
-              color: "#f90",
-              size: "1.5rem",
-            }}
-          >
-            <GiRoundStar />
-          </IconContext.Provider>
-        </RatingContainer>
-        <CardBody>
-          <ListGroup>
-            <ListItem>
-              <h3>{props.name}</h3>
-            </ListItem>
-            <ListItem>
-              <ListItemHeader>terrain: </ListItemHeader>
-              <Text>{props.terrain}</Text>
-            </ListItem>
-            <ListItem>
-              <ListItemHeader>location: </ListItemHeader>
-              <Text>{props.location}</Text>
-              <Text>
-                {props.city}, {props.state}
-              </Text>
-              <Text>{props.country}</Text>
-            </ListItem>
-          </ListGroup>
-          <UserActions>
-            <UpdateSkatepark id={props.id} />
-            <DeleteSkatepark id={props.id} />
-            <SkateparkDetail id={props.id} />
-          </UserActions>
-        </CardBody>
+        <SkateparkDetail id={props.id}>
+          <CardImage src={props.image} alt="skatepark" />
+          <RatingContainer>
+            <RatingNumber>{props.rating}</RatingNumber>
+            <IconContext.Provider
+              value={{
+                color: "#f90",
+                size: "1.5rem",
+              }}
+            >
+              <GiRoundStar />
+            </IconContext.Provider>
+          </RatingContainer>
+          <CardBody>
+            <ListGroup>
+              <ListItem>
+                <h3>{props.name}</h3>
+              </ListItem>
+              <ListItem>
+                <ListItemHeader>terrain: </ListItemHeader>
+                <Text>{props.terrain}</Text>
+              </ListItem>
+              <ListItem>
+                <ListItemHeader>location: </ListItemHeader>
+                <Text>{props.location}</Text>
+                <Text>
+                  {props.city}, {props.state}
+                </Text>
+                <Text>{props.country}</Text>
+              </ListItem>
+            </ListGroup>
+            <UserActions>
+              <UpdateSkatepark id={props.id} />
+              <DeleteSkatepark id={props.id} />
+              {/* <SkateparkDetail id={props.id} /> */}
+            </UserActions>
+          </CardBody>
+        </SkateparkDetail>
       </Card>
     </>
   );

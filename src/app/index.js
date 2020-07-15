@@ -43,21 +43,39 @@ function App() {
         pauseOnHover
       />
       <NavBar />
-      <Switch>
-        <Route path="/" exact component={SpotGrid} />
-        <Route path="/skateparks/list" exact component={SkateparkList} />
-        <Route path="/skateparks/create" exact component={SkateparkInsert} />
-        <Route
-          path="/skateparks/details/:id"
-          exact
-          component={SkateparkDetail}
-        />
-        <Route
-          path="/skateparks/update/:id"
-          exact
-          component={SkateparkUpdate}
-        />
-      </Switch>
+      <div id="page" style={{ display: `flex` }}>
+        <div id="sidebar" style={{ width: `300px`, background: `red` }}>
+          <div>sidebar content</div>
+        </div>
+        <div
+          id="content"
+          style={{
+            background: `blue`,
+            flex: `1 0 auto`,
+            /* enable grow, disable shrink */
+          }}
+        >
+          <Switch>
+            <Route path="/" exact component={SpotGrid} />
+            <Route path="/skateparks/list" exact component={SkateparkList} />
+            <Route
+              path="/skateparks/create"
+              exact
+              component={SkateparkInsert}
+            />
+            <Route
+              path="/skateparks/details/:id"
+              exact
+              component={SkateparkDetail}
+            />
+            <Route
+              path="/skateparks/update/:id"
+              exact
+              component={SkateparkUpdate}
+            />
+          </Switch>
+        </div>
+      </div>
     </Router>
   );
 }

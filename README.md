@@ -5,3 +5,4 @@
 
 3. convert class components to function components
 4. choose and implement fonts
+5. sidebar and main content fix
