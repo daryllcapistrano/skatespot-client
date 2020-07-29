@@ -13,8 +13,6 @@ class UpdateSkatepark extends Component {
     return <Update onClick={this.updateUser}>Update</Update>;
   }
 }
-
-// * Wrapper component for clickable card
 class SkateparkDetail extends Component {
   updateUser = (event) => {
     event.preventDefault();
@@ -22,7 +20,7 @@ class SkateparkDetail extends Component {
   };
 
   render() {
-    return <Details onClick={this.updateUser}>{this.props.children}</Details>;
+    return <Details onClick={this.updateUser}>Details</Details>;
   }
 }
 

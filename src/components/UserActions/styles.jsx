@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Update = styled.div.attrs({
+export const Update = styled.a.attrs({
   className: "p-2",
 })`
   color: #9999cc;
@@ -8,7 +8,7 @@ export const Update = styled.div.attrs({
   display: inline;
 `;
 
-export const Delete = styled.div.attrs({
+export const Delete = styled.a.attrs({
   className: "p-2",
 })`
   color: #9999cc;
@@ -16,6 +16,10 @@ export const Delete = styled.div.attrs({
   display: inline;
 `;
 
-export const Details = styled.a.attrs({})`
+export const Details = styled.a.attrs({
+  className: "p-2",
+})`
+  color: #9999cc;
   cursor: pointer;
+  display: inline;
 `;

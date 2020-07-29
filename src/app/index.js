@@ -16,13 +16,9 @@ import {
 } from "../pages";
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap');
   body {
-    ${
-      "" /* font-family: 'IBM Plex Sans', sans-serif;
-    font-family: 'IBM Plex Sans Condensed', sans-serif; */
-    }
     font-family: 'IBM Plex Serif', serif;
+    color: #000000
   }
 `;
 

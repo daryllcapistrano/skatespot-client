@@ -14,7 +14,7 @@ export const Nav = styled.nav.attrs({
 export const TitleLink = styled(Link).attrs({
   className: "navbar-brand m-2 p-0",
 })`
-  color: #ffffff;
+  color: #000000;
   max-width: 100%;
   :hover {
     color: #ffcc66;
@@ -42,7 +42,7 @@ export const NavItem = styled.li.attrs({
 export const NavLink = styled(Link).attrs({
   className: "nav-link",
 })`
-  color: #ffffff;
+  color: #000000;
   :hover {
     color: #ffcc66;
   }
