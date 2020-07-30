@@ -44,6 +44,9 @@ function NavBar() {
           <NavItem>
             <NavLink to="/skateparks/list">List Skateparks</NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </NavItem>
         </NavList>
       </Collapse>
     </Nav>
