@@ -204,7 +204,7 @@ class SkateparkUpdate extends Component {
         />
 
         <Button onClick={this.handleUpdateSkatepark}>Update Skatepark</Button>
-        <CancelButton href={"/skateparks/list"}>Cancel</CancelButton>
+        <CancelButton href={"/"}>Cancel</CancelButton>
       </PageWrapper>
     );
   }

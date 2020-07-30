@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import api from "../api";
 
-import { FaPlus, FaListUl } from "react-icons/fa";
+// import { FaPlus, FaListUl } from "react-icons/fa";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Dashboard extends Component {
     return (
       <>
         <div className="row">
-          <div
+          {/* <div
             className="col-md-2 d-none d-lg-block"
             style={{ height: `100vh`, backgroundColor: `aliceblue` }}
           >
@@ -50,7 +50,7 @@ class Dashboard extends Component {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
           <div
             className="col-md-12 col-lg-10"
             style={{ height: `100vh`, backgroundColor: `antiquewhite` }}

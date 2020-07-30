@@ -8,7 +8,7 @@ export const Wrapper = styled.a.attrs({
 export const Nav = styled.nav.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`
-  justify-content: space-between;
+  ${"" /* justify-content: space-between; */}
 `;
 
 export const TitleLink = styled(Link).attrs({
