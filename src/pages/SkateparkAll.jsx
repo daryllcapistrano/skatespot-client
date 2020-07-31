@@ -4,7 +4,7 @@ import { SpotCard } from "../components/Cards";
 // Style Imports
 import { Wrapper, ContainerRow, ContainerCol } from "./styles";
 
-class SpotGrid extends Component {
+class SkateparkAll extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,4 +51,4 @@ class SpotGrid extends Component {
   }
 }
 
-export default SpotGrid;
+export default SkateparkAll;

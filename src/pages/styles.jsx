@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// SpotGrid Styles
+// SkateparkAll Styles
 export const Wrapper = styled.div.attrs({
   className: "container py-4",
 })``;

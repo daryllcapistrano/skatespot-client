@@ -15,7 +15,7 @@ import {
   SkateparkInsert,
   SkateparkUpdate,
   SkateparkDetail,
-  SpotGrid,
+  SkateparkAll,
 } from "../pages";
 
 function App() {
@@ -39,8 +39,7 @@ function App() {
         <Sidebar />
         <DashboardMain>
           <Switch>
-            <Route path="/" exact component={SpotGrid} />
-            {/* <Route path="/dashboard" exact component={Dashboard} /> */}
+            <Route path="/" exact component={SkateparkAll} />
             <Route path="/skateparks/list" exact component={SkateparkList} />
             <Route
               path="/skateparks/create"
