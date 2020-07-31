@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ToastContainer, Slide } from "react-toastify";
 // components
 import { NavBar } from "../components/NavBar";
-import DashboardMain from "../components/Dashboard/Dashboard";
-import Sidebar from "../components/Sidebar/Sidebar";
+import { Dashboard } from "../components/Dashboard";
+import { Sidebar } from "../components/Sidebar";
 // styles
 import GlobalStyles from "./GlobalStyles";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -37,7 +37,7 @@ function App() {
       <NavBar />
       <div className="row">
         <Sidebar />
-        <DashboardMain>
+        <Dashboard>
           <Switch>
             <Route path="/" exact component={SkateparkAll} />
             <Route path="/skateparks/list" exact component={SkateparkList} />
@@ -57,7 +57,7 @@ function App() {
               component={SkateparkUpdate}
             />
           </Switch>
-        </DashboardMain>
+        </Dashboard>
       </div>
     </Router>
   );

@@ -1,40 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaPlus, FaListUl, FaHome } from "react-icons/fa";
+import { Wrapper, List, ListItem, ListItemText } from "./styles";
 
 const Sidebar = () => {
   return (
-    <div
-      className="col-md-2 d-none d-lg-block"
-      style={{
-        height: `100vh`,
-        backgroundColor: `#121212`,
-        borderRight: `1px solid #8693AB`,
-      }}
-    >
+    <Wrapper>
       <div id="navigation">
-        <ul style={{ listStyleType: `none`, margin: `0`, padding: `0` }}>
-          <li style={{ padding: `15px 10px` }}>
+        <List>
+          <ListItem>
             <Link to="/">
               <FaHome />
-              <span style={{ paddingLeft: `8px` }}>Home</span>
+              <ListItemText>Home</ListItemText>
             </Link>
-          </li>
-          <li style={{ padding: `15px 10px` }}>
+          </ListItem>
+          <ListItem>
             <Link to="/skateparks/create">
               <FaPlus />
-              <span style={{ paddingLeft: `8px` }}>Add New Spot</span>
+              <ListItemText>Add New Spot</ListItemText>
             </Link>
-          </li>
-          <li style={{ padding: `15px 10px` }}>
+          </ListItem>
+          <ListItem>
             <Link to="/skateparks/list">
               <FaListUl />
-              <span style={{ paddingLeft: `8px` }}>List All Spots</span>
+              <ListItemText>List All Spots</ListItemText>
             </Link>
-          </li>
-        </ul>
+          </ListItem>
+        </List>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 
