@@ -7,10 +7,10 @@ import {
   Nav,
   TitleLink,
   HamburgerButton,
-  // Collapse,
-  // NavList,
-  // NavItem,
-  // NavLink,
+  Collapse,
+  NavList,
+  NavItem,
+  NavLink,
 } from "./styles";
 
 function NavBar() {
@@ -36,7 +36,7 @@ function NavBar() {
           <GiHamburgerMenu />
         </IconContext.Provider>
       </HamburgerButton>
-      {/* <Collapse id="collapseThis">
+      <Collapse id="collapseThis">
         <NavList>
           <NavItem>
             <NavLink to="/skateparks/create">Add A New Spot</NavLink>
@@ -44,11 +44,8 @@ function NavBar() {
           <NavItem>
             <NavLink to="/skateparks/list">List Skateparks</NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink to="/dashboard">Dashboard</NavLink>
-          </NavItem>
         </NavList>
-      </Collapse> */}
+      </Collapse>
     </Nav>
   );
 }

@@ -8,16 +8,16 @@ export const Wrapper = styled.a.attrs({
 export const Nav = styled.nav.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`
-  ${"" /* justify-content: space-between; */}
+  background-color: #121212;
 `;
 
 export const TitleLink = styled(Link).attrs({
   className: "navbar-brand m-2 p-0",
 })`
-  color: #000000;
+  color: #8693ab;
   max-width: 100%;
   :hover {
-    color: #ffcc66;
+    color: #8693ab;
   }
 `;
 
@@ -42,8 +42,8 @@ export const NavItem = styled.li.attrs({
 export const NavLink = styled(Link).attrs({
   className: "nav-link",
 })`
-  color: #000000;
+  color: #8693ab;
   :hover {
-    color: #ffcc66;
+    color: #8693ab;
   }
 `;

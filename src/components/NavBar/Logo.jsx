@@ -9,7 +9,7 @@ function Logo() {
     <Wrapper href="/">
       <IconContext.Provider
         value={{
-          color: "#000000",
+          color: "#8693AB",
           size: "2rem",
         }}
       >

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import api from "../api";
-import { DetailWrapper } from "./styles";
+
+// import { DetailWrapper } from "./styles";
 
 import { SpotCard } from "../components/Cards";
 
@@ -52,19 +53,50 @@ class SkateparkDetail extends Component {
     } = this.state;
 
     return (
-      <DetailWrapper>
-        <SpotCard
-          id={id}
-          name={name}
-          terrain={terrain}
-          location={location}
-          city={city}
-          state={state}
-          country={country}
-          rating={rating}
-          image={image}
-        />
-      </DetailWrapper>
+      // <DetailWrapper>
+      //   <SpotCard
+      //     id={id}
+      //     name={name}
+      //     terrain={terrain}
+      //     location={location}
+      //     city={city}
+      //     state={state}
+      //     country={country}
+      //     rating={rating}
+      //     image={image}
+      //   />
+
+      // </DetailWrapper>
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <SpotCard
+              id={id}
+              name={name}
+              terrain={terrain}
+              location={location}
+              city={city}
+              state={state}
+              country={country}
+              rating={rating}
+              image={image}
+            />
+          </div>
+          <div className="col">
+            <SpotCard
+              id={id}
+              name={name}
+              terrain={terrain}
+              location={location}
+              city={city}
+              state={state}
+              country={country}
+              rating={rating}
+              image={image}
+            />
+          </div>
+        </div>
+      </div>
     );
   }
 }
