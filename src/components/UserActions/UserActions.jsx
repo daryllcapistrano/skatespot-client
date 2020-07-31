@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import api from "../../api";
-import { notifyDeleteSuccess } from "../Toast";
+import { notifyDeleteSuccess } from "../Notifications";
 import { Update, Delete, Details } from "./styles";
 
 class UpdateSkatepark extends Component {
