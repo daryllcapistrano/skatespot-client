@@ -1,14 +1,8 @@
 import React from "react";
+import { Wrapper } from "./styles";
 
 const Dashboard = ({ children }) => {
-  return (
-    <div
-      className="col-md-12 col-lg-10"
-      style={{ height: `100vh`, backgroundColor: `#2D2A32` }}
-    >
-      {children}
-    </div>
-  );
+  return <Wrapper>{children}</Wrapper>;
 };
 
 export default Dashboard;
