@@ -9,6 +9,7 @@ export const Nav = styled.nav.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`
   background-color: #ffffff;
+  justify-content: center;
 `;
 
 export const TitleLink = styled(Link).attrs({
@@ -37,7 +38,11 @@ export const NavList = styled.ul.attrs({
 
 export const NavItem = styled.li.attrs({
   className: "nav-item",
-})``;
+})`
+  @media (min-width: 992px) {
+    display: none;
+  }
+`;
 
 export const NavLink = styled(Link).attrs({
   className: "nav-link",
