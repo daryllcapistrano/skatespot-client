@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Card = styled.div.attrs({
   className: "card",
 })`
-  ${"" /* display: inline-block; */}
   border: 0;
   border-radius: 0;
   vertical-align: middle;
@@ -25,7 +24,8 @@ export const Card = styled.div.attrs({
 export const CardImage = styled.img.attrs({
   className: "card-img-top",
 })`
-  height: 200px;
+  height: 300px;
+  width: 100%;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 `;

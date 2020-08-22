@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Update = styled.a.attrs({
-  className: "p-2",
+  className: "p-0",
 })`
   color: #9999cc;
   cursor: pointer;
@@ -9,7 +9,7 @@ export const Update = styled.a.attrs({
 `;
 
 export const Delete = styled.a.attrs({
-  className: "p-2",
+  className: "p-0",
 })`
   color: #9999cc;
   cursor: pointer;
@@ -17,7 +17,7 @@ export const Delete = styled.a.attrs({
 `;
 
 export const Details = styled.a.attrs({
-  className: "p-2",
+  className: "p-0",
 })`
   color: #9999cc;
   cursor: pointer;

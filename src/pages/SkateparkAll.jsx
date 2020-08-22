@@ -31,18 +31,13 @@ class SkateparkAll extends Component {
           <ContainerRow>
             {this.state.skateparks.map((skatepark, index) => (
               <ContainerCol key={index}>
-                {/* <SpotCard
+                <Thumbnail
                   id={skatepark._id}
                   image={skatepark.image}
                   name={skatepark.name}
-                  terrain={skatepark.terrain}
-                  location={skatepark.location}
-                  city={skatepark.city}
-                  state={skatepark.state}
-                  country={skatepark.country}
                   rating={skatepark.rating}
-                /> */}
-                <Thumbnail id={skatepark._id} image={skatepark.image} />
+                  location={skatepark.location}
+                />
               </ContainerCol>
             ))}
           </ContainerRow>

@@ -67,7 +67,7 @@ class SkateparkDetail extends Component {
       //   />
 
       // </DetailWrapper>
-      <div className="container">
+      <div className="container py-3">
         <div className="row">
           <div className="col">
             <SpotCard

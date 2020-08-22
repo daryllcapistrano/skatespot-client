@@ -6,12 +6,14 @@ export const Wrapper = styled.div.attrs({
 })``;
 
 export const ContainerRow = styled.div.attrs({
-  className: "row",
+  className: "row ",
 })``;
 
 export const ContainerCol = styled.div.attrs({
-  className: "col-lg-4 col-md-6 py-3",
-})``;
+  className: "col-lg-4 col-md-6",
+})`
+  padding: 0.25em;
+`;
 
 // SkateparkDetail Styles
 export const DetailWrapper = styled.div.attrs({
