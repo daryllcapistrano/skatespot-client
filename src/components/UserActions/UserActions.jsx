@@ -20,7 +20,7 @@ class SkateparkDetail extends Component {
   };
 
   render() {
-    return <Details onClick={this.updateUser}>Details</Details>;
+    return <Details onClick={this.updateUser}>{this.props.children}</Details>;
   }
 }
 

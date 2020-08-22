@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'IBM Plex Serif', serif;
-    background-color: #121212;
+    background-color: #ffffff;
     color: #000000
   }
   a {

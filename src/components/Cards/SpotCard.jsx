@@ -5,7 +5,7 @@ import { GiRoundStar } from "react-icons/gi";
 import {
   UpdateSkatepark,
   DeleteSkatepark,
-  SkateparkDetail,
+  // SkateparkDetail,
 } from "../UserActions";
 
 import {
@@ -58,7 +58,7 @@ function SpotCard(props) {
           <UserActions>
             <UpdateSkatepark id={props.id} />
             <DeleteSkatepark id={props.id} />
-            <SkateparkDetail id={props.id} />
+            {/* <SkateparkDetail id={props.id} /> */}
           </UserActions>
         </CardBody>
       </Card>

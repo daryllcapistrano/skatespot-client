@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import api from "../api";
-import { SpotCard } from "../components/Cards";
+import { Thumbnail } from "../components/Cards";
 // Style Imports
 import { Wrapper, ContainerRow, ContainerCol } from "./styles";
 
@@ -31,7 +31,7 @@ class SkateparkAll extends Component {
           <ContainerRow>
             {this.state.skateparks.map((skatepark, index) => (
               <ContainerCol key={index}>
-                <SpotCard
+                {/* <SpotCard
                   id={skatepark._id}
                   image={skatepark.image}
                   name={skatepark.name}
@@ -41,7 +41,8 @@ class SkateparkAll extends Component {
                   state={skatepark.state}
                   country={skatepark.country}
                   rating={skatepark.rating}
-                />
+                /> */}
+                <Thumbnail id={skatepark._id} image={skatepark.image} />
               </ContainerCol>
             ))}
           </ContainerRow>

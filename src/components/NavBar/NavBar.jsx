@@ -17,7 +17,7 @@ function NavBar() {
   return (
     <Nav>
       <Logo />
-      <TitleLink to="/">SkateHereApp</TitleLink>
+      <TitleLink to="/">Brand Name</TitleLink>
 
       <HamburgerButton
         type="button"

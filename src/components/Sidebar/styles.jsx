@@ -1,21 +1,41 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div.attrs({
   className: "col-md-2 d-none d-lg-block",
 })`
   height: 100vh;
-  background-color: #121212;
-  border-right: 1px solid #8693ab;
+  background-color: #ffffff;
+  padding: 0;
 `;
 
 export const List = styled.ul`
   list-style-type: none;
+  height: 100%;
   margin: 0;
   padding: 0;
 `;
 export const ListItem = styled.li`
-  padding: 15px 10px;
+  margin: 0.6em 0.3em;
 `;
 export const ListItemText = styled.span`
-  padding-left: 8px;
+  color: #ffffff;
+`;
+
+export const Button = styled.button.attrs({
+  className: "btn btn-primary btn-block",
+  type: "button",
+})`
+  border-radius: 3px;
+  height: 3.5em;
+  display: block;
+  padding: 0;
+`;
+
+export const LinkWrapper = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 `;

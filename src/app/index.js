@@ -9,7 +9,7 @@ import { Sidebar } from "../components/Sidebar";
 import GlobalStyles from "./GlobalStyles";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
-// pages
+// pages for router
 import {
   SkateparkList,
   SkateparkInsert,
@@ -35,7 +35,7 @@ function App() {
         pauseOnHover
       />
       <NavBar />
-      <div className="row">
+      <div className="row" style={{ margin: `0` }}>
         <Sidebar />
         <Dashboard>
           <Switch>

@@ -1,3 +1,4 @@
 import SpotCard from "./SpotCard";
+import Thumbnail from "./Thumbnail";
 
-export { SpotCard };
+export { SpotCard, Thumbnail };
