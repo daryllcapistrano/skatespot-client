@@ -31,7 +31,7 @@ export const CardImage = styled.img.attrs({
 `;
 
 export const CardBody = styled.div.attrs({
-  className: "card-body",
+  className: "card-body px-3 py-1",
 })``;
 
 export const ListGroup = styled.ul.attrs({

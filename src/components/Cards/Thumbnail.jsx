@@ -10,14 +10,12 @@ import {
 import {
   Card,
   CardImage,
-  // CardBody,
+  CardBody,
   // ListGroup,
   // ListItem,
   // ListItemHeader,
   // Text,
   // UserActions,
-  // RatingContainer,
-  // RatingNumber,
 } from "./styles";
 
 function Thumbnail(props) {
@@ -25,14 +23,17 @@ function Thumbnail(props) {
     <>
       <Card>
         <SkateparkDetail id={props.id}>
-          <div
-            style={{ textAlign: `center`, position: `absolute`, width: `100%` }}
-          >
-            <h5 style={{ margin: `.5em`, color: `#ffffff` }}>{props.name}</h5>
-            <Rating rating={props.rating} />
-            <h6 style={{ color: `#ffffff` }}>{props.location}</h6>
-          </div>
           <CardImage src={props.image} alt="skatepark" />
+          <CardBody>
+            <h5 class="card-title my-1">{props.name}</h5>
+            <Rating rating={props.rating} />
+            <p class="card-text mx-0 mb-1">
+              <small class="text-muted">{props.location}</small>
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">
+              {props.city}, {props.state}
+            </h6>
+          </CardBody>
         </SkateparkDetail>
       </Card>
     </>

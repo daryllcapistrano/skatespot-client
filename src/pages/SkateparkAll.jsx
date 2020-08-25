@@ -36,6 +36,8 @@ class SkateparkAll extends Component {
                   image={skatepark.image}
                   name={skatepark.name}
                   rating={skatepark.rating}
+                  city={skatepark.city}
+                  state={skatepark.state}
                   location={skatepark.location}
                 />
               </ContainerCol>
