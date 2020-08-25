@@ -5,7 +5,7 @@ export const Wrapper = styled.div.attrs({
   className: "col-md-2 d-none d-lg-block",
 })`
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #191d3a;
   padding: 0;
 `;
 
@@ -26,10 +26,12 @@ export const Button = styled.button.attrs({
   className: "btn btn-primary btn-block",
   type: "button",
 })`
-  border-radius: 3px;
+  border-radius: 30px;
   height: 3.5em;
   display: block;
   padding: 0;
+  background-color: #ee5f21;
+  border-color: #ee5f21;
 `;
 
 export const LinkWrapper = styled(Link)`

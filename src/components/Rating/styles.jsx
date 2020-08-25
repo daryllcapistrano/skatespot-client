@@ -4,7 +4,7 @@ export const RatingContainer = styled.div`
   position: absolute;
   top: 0px;
   right: 0px;
-  color: #f90;
+  color: #ffffff;
   ${"" /* use bootstrap classname for below */}
   margin: 0.5rem;
 `;

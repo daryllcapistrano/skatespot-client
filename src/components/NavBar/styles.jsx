@@ -8,7 +8,7 @@ export const Wrapper = styled.a.attrs({
 export const Nav = styled.nav.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`
-  background-color: #ffffff;
+  background-color: #191d3a;
   justify-content: center;
 `;
 
