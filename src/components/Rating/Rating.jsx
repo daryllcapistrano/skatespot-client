@@ -11,7 +11,7 @@ function Rating(props) {
         <RatingNumber>{props.rating}</RatingNumber>
         <IconContext.Provider
           value={{
-            color: "#ffffff",
+            color: "#EE6021",
             size: "1.5rem",
           }}
         >

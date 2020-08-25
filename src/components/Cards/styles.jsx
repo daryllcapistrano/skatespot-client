@@ -24,15 +24,16 @@ export const Card = styled.div.attrs({
 export const CardImage = styled.img.attrs({
   className: "card-img-top",
 })`
-  height: 300px;
-  width: 100%;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 `;
 
 export const CardBody = styled.div.attrs({
   className: "card-body px-3 py-1",
-})``;
+})`
+  background-color: #191d3a;
+  color: #ffffff;
+`;
 
 export const ListGroup = styled.ul.attrs({
   className: "list-group list-group-flush",

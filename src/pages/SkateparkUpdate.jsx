@@ -140,7 +140,7 @@ class SkateparkUpdate extends Component {
 
     return (
       <PageWrapper>
-        <Title>Update {name} Skatepark</Title>
+        <Title>Update {name}</Title>
 
         <Label>Name: </Label>
         <InputText

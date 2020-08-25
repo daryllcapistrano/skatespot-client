@@ -82,19 +82,6 @@ class SkateparkDetail extends Component {
               image={image}
             />
           </div>
-          <div className="col">
-            <SpotCard
-              id={id}
-              name={name}
-              terrain={terrain}
-              location={location}
-              city={city}
-              state={state}
-              country={country}
-              rating={rating}
-              image={image}
-            />
-          </div>
         </div>
       </div>
     );

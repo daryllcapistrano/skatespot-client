@@ -18,9 +18,7 @@ export const ContainerCol = styled.div.attrs({
 // SkateparkDetail Styles
 export const DetailWrapper = styled.div.attrs({
   className: "m-auto py-4",
-})`
-  width: 400px;
-`;
+})``;
 
 // SkateparkInsert & SkateparkUpdate Styles
 export const Title = styled.h1.attrs({
@@ -28,21 +26,21 @@ export const Title = styled.h1.attrs({
 })``;
 
 export const PageWrapper = styled.div.attrs({
-  className: "form-group m-auto py-4",
+  className: "form-group mx-3 py-4",
 })`
-  width: 400px;
+  color: #ffffff;
 `;
 
 export const Label = styled.label.attrs({
-  className: "m-1",
+  className: "m-0",
 })``;
 
 export const InputText = styled.input.attrs({
-  className: "form-control m-1",
+  className: "form-control m-0",
 })``;
 
 export const Button = styled.button.attrs({
-  className: `btn btn-primary m-2`,
+  className: `btn btn-primary m-0`,
 })``;
 
 export const CancelButton = styled.a.attrs({
