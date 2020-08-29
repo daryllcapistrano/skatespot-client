@@ -1,17 +1,10 @@
 import styled from "styled-components";
 
 export const RatingContainer = styled.div`
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  color: #ee6021;
-  ${"" /* use bootstrap classname for below */}
-  margin: 0.5rem;
+  color: #f44336;
+  display: flex;
 `;
 
-export const RatingNumber = styled.h5`
-  position: absolute;
-  right: 25px;
-  ${"" /* use bootstrap classname for below */}
-  padding-top: 2.5px;
-`;
+export const RatingNumber = styled.h6.attrs({
+  className: "m-1",
+})``;

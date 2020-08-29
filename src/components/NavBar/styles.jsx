@@ -2,41 +2,38 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Wrapper = styled.a.attrs({
-  className: "navbar-brand",
+  className: "navbar-brand m-0 p-0",
 })``;
 
-export const Nav = styled.nav.attrs({
+export const Nav = styled.div.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`
-  background-color: #191d3a;
-  justify-content: center;
+  background-color: #1e2225;
+  border-bottom: 3px solid #272c2e;
 `;
 
 export const TitleLink = styled(Link).attrs({
   className: "navbar-brand m-2 p-0",
 })`
-  color: #8693ab;
-  max-width: 100%;
+  color: #ffffff;
   :hover {
     color: #8693ab;
   }
 `;
 
 export const HamburgerButton = styled.button.attrs({
-  className: "navbar-toggler pr-0",
+  className: "navbar-toggler",
 })``;
 
 export const Collapse = styled.div.attrs({
   className: "collapse navbar-collapse",
-})`
-  transition: none !important;
-`;
-
-export const NavList = styled.ul.attrs({
-  className: "navbar-nav my-2 my-lg-0",
 })``;
 
-export const NavItem = styled.li.attrs({
+export const NavList = styled.div.attrs({
+  className: "navbar-nav",
+})``;
+
+export const NavItem = styled.div.attrs({
   className: "nav-item",
 })`
   @media (min-width: 992px) {

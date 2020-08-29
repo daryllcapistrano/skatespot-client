@@ -34,10 +34,10 @@ function App() {
         draggable
         pauseOnHover
       />
-      <NavBar />
       <div className="row" style={{ margin: `0` }}>
         <Sidebar />
         <Dashboard>
+          <NavBar />
           <Switch>
             <Route path="/" exact component={SkateparkAll} />
             <Route path="/skateparks/list" exact component={SkateparkList} />

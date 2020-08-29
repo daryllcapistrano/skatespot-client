@@ -26,7 +26,7 @@ function SpotCard(props) {
     <>
       <Card>
         <CardImage src={props.image} alt="skatepark" />
-        <RatingContainer>
+        {/* <RatingContainer>
           <RatingNumber>{props.rating}</RatingNumber>
           <IconContext.Provider
             value={{
@@ -36,11 +36,37 @@ function SpotCard(props) {
           >
             <GiRoundStar />
           </IconContext.Provider>
-        </RatingContainer>
+        </RatingContainer> */}
         <CardBody>
+          <RatingContainer>
+            <RatingNumber>{props.rating}</RatingNumber>
+            <IconContext.Provider
+              value={{
+                color: "#f90",
+                size: "1.5rem",
+              }}
+            >
+              <GiRoundStar />
+            </IconContext.Provider>
+          </RatingContainer>
           <ListGroup>
             <ListItem>
-              <h3>{props.name}</h3>
+              <div>
+                <h3>{props.name}</h3>
+              </div>
+              <div>
+                <RatingContainer>
+                  <RatingNumber>{props.rating}</RatingNumber>
+                  <IconContext.Provider
+                    value={{
+                      color: "#f90",
+                      size: "1.5rem",
+                    }}
+                  >
+                    <GiRoundStar />
+                  </IconContext.Provider>
+                </RatingContainer>
+              </div>
             </ListItem>
             <ListItem>
               <ListItemHeader>terrain: </ListItemHeader>

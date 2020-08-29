@@ -1,6 +1,6 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { GiRoundStar } from "react-icons/gi";
+import { FcLike } from "react-icons/fc";
 
 import { RatingContainer, RatingNumber } from "./styles";
 
@@ -12,10 +12,12 @@ function Rating(props) {
         <IconContext.Provider
           value={{
             color: "#EE6021",
-            size: "1.5rem",
+            size: "1rem",
           }}
         >
-          <GiRoundStar />
+          <span>
+            <FcLike />
+          </span>
         </IconContext.Provider>
       </RatingContainer>
     </>

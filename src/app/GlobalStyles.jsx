@@ -3,9 +3,10 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'IBM Plex Serif', serif;
-    background-color: #090E28;
+    background-color: #1F2226;
     color: #000000
   }
+  
   a {
     color: white;
   }
@@ -13,6 +14,8 @@ const GlobalStyles = createGlobalStyle`
     color: yellow;
     text-decoration: none;
   }
+
+  
 `;
 
 export default GlobalStyles;

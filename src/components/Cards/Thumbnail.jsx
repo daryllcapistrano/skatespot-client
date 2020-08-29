@@ -25,8 +25,11 @@ function Thumbnail(props) {
         <SkateparkDetail id={props.id}>
           <CardImage src={props.image} alt="skatepark" />
           <CardBody>
-            <h5 class="card-title my-1">{props.name}</h5>
-            <Rating rating={props.rating} />
+            <div style={{ display: `flex`, justifyContent: `space-between` }}>
+              <h5 class="card-title my-2">{props.name}</h5>
+              <Rating rating={props.rating} />
+            </div>
+
             <p class="card-text mx-0 mb-1">
               <small class="text-muted">{props.location}</small>
             </p>

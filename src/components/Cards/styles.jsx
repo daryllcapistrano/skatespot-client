@@ -17,6 +17,7 @@ export const Card = styled.div.attrs({
     :hover {
       -webkit-transform: scale(1.01);
       transform: scale(1.01);
+      background-color: transparent;
     }
   }
 `;
@@ -31,7 +32,7 @@ export const CardImage = styled.img.attrs({
 export const CardBody = styled.div.attrs({
   className: "card-body px-3 py-1",
 })`
-  background-color: #191d3a;
+  background-color: #272c2e;
   color: #ffffff;
 `;
 
@@ -58,17 +59,12 @@ export const UserActions = styled.div.attrs({
 })``;
 
 export const RatingContainer = styled.div`
-  position: absolute;
-  top: 0px;
-  right: 0px;
   color: #f90;
   ${"" /* use bootstrap classname for below */}
   margin: 0.5rem;
 `;
 
 export const RatingNumber = styled.h5`
-  position: absolute;
-  right: 25px;
   ${"" /* use bootstrap classname for below */}
   padding-top: 2.5px;
 `;

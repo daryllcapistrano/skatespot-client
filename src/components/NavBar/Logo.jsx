@@ -2,18 +2,18 @@ import React from "react";
 import { Wrapper } from "./styles";
 
 import { IconContext } from "react-icons";
-import { FaHubspot } from "react-icons/fa";
+import { FaMapPin } from "react-icons/fa";
 
 function Logo() {
   return (
     <Wrapper href="/">
       <IconContext.Provider
         value={{
-          color: "#8693AB",
-          size: "2rem",
+          color: "#ffffff",
+          size: "1.25em",
         }}
       >
-        <FaHubspot />
+        <FaMapPin />
       </IconContext.Provider>
     </Wrapper>
   );

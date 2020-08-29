@@ -5,7 +5,7 @@ import { notifyCreateSuccess } from "../components/Notifications";
 import {
   Title,
   PageWrapper,
-  Label,
+  // Label,
   InputText,
   Button,
   CancelButton,
@@ -120,73 +120,83 @@ class SkateparkInsert extends Component {
       image,
     } = this.state;
     return (
-      <PageWrapper>
-        <Title>Add Skatepark</Title>
+      <>
+        <div className="row p-0 m-0">
+          <div className="col-lg-6">
+            <PageWrapper>
+              <Title>Add Skatepark</Title>
+              <InputText
+                type="text"
+                value={name}
+                placeholder="Spot Name"
+                onChange={this.handleChangeInputName}
+              />
 
-        <Label>Name: </Label>
-        <InputText
-          type="text"
-          value={name}
-          onChange={this.handleChangeInputName}
-        />
+              <InputText
+                type="text"
+                value={terrain}
+                placeholder="Terrain Type"
+                onChange={this.handleChangeInputTerrain}
+              />
 
-        <Label>Terrain: </Label>
-        <InputText
-          type="text"
-          value={terrain}
-          onChange={this.handleChangeInputTerrain}
-        />
+              <InputText
+                type="text"
+                value={location}
+                placeholder="Location"
+                onChange={this.handleChangeInputLocation}
+              />
 
-        <Label>Location: </Label>
-        <InputText
-          type="text"
-          value={location}
-          onChange={this.handleChangeInputLocation}
-        />
+              <InputText
+                type="text"
+                value={city}
+                placeholder="City"
+                onChange={this.handleChangeInputCity}
+              />
 
-        <Label>City: </Label>
-        <InputText
-          type="text"
-          value={city}
-          onChange={this.handleChangeInputCity}
-        />
+              <InputText
+                type="text"
+                value={state}
+                placeholder="State"
+                onChange={this.handleChangeInputState}
+              />
 
-        <Label>State: </Label>
-        <InputText
-          type="text"
-          value={state}
-          onChange={this.handleChangeInputState}
-        />
+              <InputText
+                type="text"
+                value={country}
+                placeholder="Country"
+                onChange={this.handleChangeInputCountry}
+              />
 
-        <Label>Country: </Label>
-        <InputText
-          type="text"
-          value={country}
-          onChange={this.handleChangeInputCountry}
-        />
+              <InputText
+                type="number"
+                step="0.1"
+                lang="en-US"
+                min="0"
+                max="10"
+                pattern="[0-9]+([,\.][0-9]+)?"
+                value={rating}
+                placeholder="Rating It"
+                onChange={this.handleChangeInputRating}
+              />
 
-        <Label>Rating: </Label>
-        <InputText
-          type="number"
-          step="0.1"
-          lang="en-US"
-          min="0"
-          max="10"
-          pattern="[0-9]+([,\.][0-9]+)?"
-          value={rating}
-          onChange={this.handleChangeInputRating}
-        />
+              <InputText
+                type="text"
+                value={image}
+                placeholder="Add An Image"
+                onChange={this.handleChangeInputImage}
+              />
 
-        <Label>Image: </Label>
-        <InputText
-          type="text"
-          value={image}
-          onChange={this.handleChangeInputImage}
-        />
-
-        <Button onClick={this.handleIncludeSkatepark}>Add Skatepark</Button>
-        <CancelButton href={"/"}>Cancel</CancelButton>
-      </PageWrapper>
+              <Button onClick={this.handleIncludeSkatepark}>
+                Add Skatepark
+              </Button>
+              <CancelButton href={"/"}>Cancel</CancelButton>
+            </PageWrapper>
+          </div>
+          <div className="col-lg-6">
+            <h1>Add SVG Animation</h1>
+          </div>
+        </div>
+      </>
     );
   }
 }
