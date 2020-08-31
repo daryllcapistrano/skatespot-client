@@ -7,7 +7,7 @@ import {
   DeleteSkatepark,
 } from "../components/UserActions";
 // Style Imports
-import { Wrapper } from "./styles";
+import { ContainerRow } from "./styles";
 import "react-table-6/react-table.css";
 
 class SkateparkList extends Component {
@@ -128,7 +128,7 @@ class SkateparkList extends Component {
 
     return (
       <React.Fragment>
-        <Wrapper>
+        <ContainerRow>
           {showTable && (
             <ReactTable
               data={skateparks}
@@ -139,7 +139,7 @@ class SkateparkList extends Component {
               minRows={0}
             />
           )}
-        </Wrapper>
+        </ContainerRow>
       </React.Fragment>
     );
   }

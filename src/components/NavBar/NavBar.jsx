@@ -18,8 +18,11 @@ function NavBar() {
     <Nav>
       <div style={{ width: `100%` }}>
         <div style={{ width: `100%` }}>
-          <Logo />
-          <TitleLink to="/">Sick Spot</TitleLink>
+          {/* <Logo /> */}
+          <TitleLink to="/">
+            Sick Spot
+            <Logo />
+          </TitleLink>
         </div>
         <div style={{ width: `100%`, textAlign: `center` }}>
           <HamburgerButton

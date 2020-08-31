@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import api from "../api";
 
-// import { DetailWrapper } from "./styles";
-
+import { UpdateSkatepark, DeleteSkatepark } from "../components/UserActions";
 import { SpotCard } from "../components/Cards";
 
 class SkateparkDetail extends Component {
@@ -53,23 +52,9 @@ class SkateparkDetail extends Component {
     } = this.state;
 
     return (
-      // <DetailWrapper>
-      //   <SpotCard
-      //     id={id}
-      //     name={name}
-      //     terrain={terrain}
-      //     location={location}
-      //     city={city}
-      //     state={state}
-      //     country={country}
-      //     rating={rating}
-      //     image={image}
-      //   />
-
-      // </DetailWrapper>
-      <div className="container py-3">
-        <div className="row">
-          <div className="col">
+      <div className="container m-0">
+        <div className="row" style={{ height: `100vh` }}>
+          <div className="col-md-6">
             <SpotCard
               id={id}
               name={name}
@@ -81,6 +66,10 @@ class SkateparkDetail extends Component {
               rating={rating}
               image={image}
             />
+          </div>
+          <div className="col-md-6">
+            <UpdateSkatepark id={this.state.id} />
+            <DeleteSkatepark id={this.state.id} />
           </div>
         </div>
       </div>

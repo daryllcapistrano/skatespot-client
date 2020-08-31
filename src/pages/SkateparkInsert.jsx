@@ -121,7 +121,7 @@ class SkateparkInsert extends Component {
     } = this.state;
     return (
       <>
-        <div className="row p-0 m-0">
+        <div className="row p-0 m-0" style={{ height: `100vh` }}>
           <div className="col-lg-6">
             <PageWrapper>
               <Title>Add Skatepark</Title>

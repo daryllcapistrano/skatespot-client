@@ -1,21 +1,21 @@
 import React from "react";
-import { Wrapper } from "./styles";
+import { LogoWrapper } from "./styles";
 
 import { IconContext } from "react-icons";
 import { FaMapPin } from "react-icons/fa";
 
 function Logo() {
   return (
-    <Wrapper href="/">
+    <LogoWrapper href="/">
       <IconContext.Provider
         value={{
           color: "#ffffff",
-          size: "1.25em",
+          size: "1.75rem",
         }}
       >
         <FaMapPin />
       </IconContext.Provider>
-    </Wrapper>
+    </LogoWrapper>
   );
 }
 

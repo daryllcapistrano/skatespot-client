@@ -26,7 +26,7 @@ function Thumbnail(props) {
           <CardImage src={props.image} alt="skatepark" />
           <CardBody>
             <div style={{ display: `flex`, justifyContent: `space-between` }}>
-              <h5 class="card-title my-2">{props.name}</h5>
+              <h5 class="card-title mb-2">{props.name}</h5>
               <Rating rating={props.rating} />
             </div>
 

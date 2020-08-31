@@ -6,6 +6,7 @@ export const Update = styled.a.attrs({
   color: #9999cc;
   cursor: pointer;
   display: inline;
+  border: 2px solid white;
 `;
 
 export const Delete = styled.a.attrs({

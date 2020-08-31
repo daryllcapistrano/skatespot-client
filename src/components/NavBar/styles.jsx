@@ -5,6 +5,10 @@ export const Wrapper = styled.a.attrs({
   className: "navbar-brand m-0 p-0",
 })``;
 
+export const LogoWrapper = styled.a.attrs({
+  className: "",
+})``;
+
 export const Nav = styled.div.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`
@@ -15,6 +19,8 @@ export const Nav = styled.div.attrs({
 export const TitleLink = styled(Link).attrs({
   className: "navbar-brand m-2 p-0",
 })`
+  font-family: "Monoton", cursive;
+  font-size: 2rem;
   color: #ffffff;
   :hover {
     color: #8693ab;
