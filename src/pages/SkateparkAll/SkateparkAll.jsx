@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import api from "../api";
-import { Thumbnail } from "../components/Cards";
-// Style Imports
+import api from "../../api";
+import { Thumbnail } from "../../components/Cards";
 import { Wrapper, ContainerRow, ContainerCol } from "./styles";
 
 class SkateparkAll extends Component {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import api from "../api";
+import api from "../../api";
 
-import { UpdateSkatepark, DeleteSkatepark } from "../components/UserActions";
-import { SpotCard } from "../components/Cards";
+import { UpdateSkatepark, DeleteSkatepark } from "../../components/UserActions";
+import { SpotCard } from "../../components/Cards";
 
 class SkateparkDetail extends Component {
   constructor(props) {
