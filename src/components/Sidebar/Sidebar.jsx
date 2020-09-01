@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPlus, FaListUl, FaHome } from "react-icons/fa";
+import { FaPlus, FaHome } from "react-icons/fa";
 import {
   Wrapper,
   List,
@@ -41,7 +41,7 @@ const Sidebar = () => {
             </LinkWrapper>
           </Button>
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <Button>
             <LinkWrapper to="/skateparks/list">
               <div>
@@ -54,7 +54,7 @@ const Sidebar = () => {
               </div>
             </LinkWrapper>
           </Button>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Wrapper>
   );

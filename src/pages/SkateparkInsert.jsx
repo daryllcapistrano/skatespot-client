@@ -169,13 +169,13 @@ class SkateparkInsert extends Component {
 
               <InputText
                 type="number"
-                step="0.1"
+                step="1"
                 lang="en-US"
                 min="0"
                 max="10"
-                pattern="[0-9]+([,\.][0-9]+)?"
+                pattern="[1-9]|10"
                 value={rating}
-                placeholder="Rating It"
+                placeholder="Rating 0-10"
                 onChange={this.handleChangeInputRating}
               />
 
