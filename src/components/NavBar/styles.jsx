@@ -16,7 +16,7 @@ export const TitleLink = styled(Link).attrs({
   className: "navbar-brand m-2 p-0",
 })`
   font-family: "Monoton", cursive;
-  font-size: 2rem;
+  font-size: 3em;
   color: #ffffff;
   :hover {
     color: #8693ab;

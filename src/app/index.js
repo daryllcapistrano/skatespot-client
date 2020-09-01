@@ -11,7 +11,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 // pages for router
 import {
-  // SkateparkList,
   SkateparkInsert,
   SkateparkUpdate,
   SkateparkDetail,
@@ -40,7 +39,6 @@ function App() {
           <NavBar />
           <Switch>
             <Route path="/" exact component={SkateparkAll} />
-            {/* <Route path="/skateparks/list" exact component={SkateparkList} /> */}
             <Route
               path="/skateparks/create"
               exact

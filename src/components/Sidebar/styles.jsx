@@ -13,7 +13,7 @@ export const List = styled.ul`
   list-style-type: none;
   height: 100%;
   margin: 0;
-  padding: 33% 0;
+  padding: 6.5em 0;
 `;
 export const ListItem = styled.li`
   margin: 0.3em;
