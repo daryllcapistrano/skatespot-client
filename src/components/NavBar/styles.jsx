@@ -1,37 +1,34 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
-export const Wrapper = styled.a.attrs({
-  className: "navbar-brand m-0 p-0",
-})``;
+import { mainBGColor } from "../../app/GlobalStyles";
 
 export const Nav = styled.div.attrs({
-  className: "navbar navbar-expand-lg px-3",
+  className: "navbar navbar-expand-lg",
 })`
-  background-color: #1e2225;
-  border-bottom: 3px solid #272c2e;
+  background-color: ${mainBGColor};
+  border-bottom: 0.15em solid #272c2e;
+  justify-content: center;
 `;
 
-export const TitleLink = styled(Link).attrs({
+export const Title = styled(Link).attrs({
   className: "navbar-brand m-2 p-0",
 })`
   font-family: "Monoton", cursive;
   font-size: 3em;
-  color: #ffffff;
-  :hover {
-    color: #8693ab;
-  }
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
-export const HamburgerButton = styled.button.attrs({
+export const Menu = styled.button.attrs({
   className: "navbar-toggler",
 })``;
 
-export const Collapse = styled.div.attrs({
+export const MobileMenu = styled.div.attrs({
   className: "collapse navbar-collapse",
 })``;
 
-export const NavList = styled.div.attrs({
+export const InnerWrapper = styled.div.attrs({
   className: "navbar-nav",
 })``;
 

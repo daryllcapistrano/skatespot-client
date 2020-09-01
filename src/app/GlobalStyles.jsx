@@ -14,8 +14,9 @@ const GlobalStyles = createGlobalStyle`
     color: yellow;
     text-decoration: none;
   }
-
-  
 `;
+
+// Theme
+export const mainBGColor = "#1e2225";
 
 export default GlobalStyles;
