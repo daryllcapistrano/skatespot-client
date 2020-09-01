@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import api from "../../api";
-import { notifyCreateSuccess } from "../../components/Notifications";
+import { notifyCreateSuccess } from "../../utils/Notifications";
 // Style Imports
 import {
   Title,

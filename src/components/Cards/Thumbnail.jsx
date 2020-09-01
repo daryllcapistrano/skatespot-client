@@ -5,7 +5,7 @@ import {
   // UpdateSkatepark,
   // DeleteSkatepark,
   SkateparkDetail,
-} from "../UserActions";
+} from "../../utils/UserActions";
 
 import {
   Card,

@@ -8,7 +8,7 @@ import { Sidebar } from "../components/Sidebar";
 // styles
 import GlobalStyles from "./GlobalStyles";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "react-toastify/dist/ReactToastify.css";
+import "../../node_modules/react-toastify/dist/ReactToastify.css";
 // pages for router
 import {
   SkateparkInsert,
