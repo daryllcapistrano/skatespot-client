@@ -1,7 +1,7 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Logo } from "../NavBar";
+import Logo from "../Logo";
 
 import {
   Nav,

@@ -5,10 +5,6 @@ export const Wrapper = styled.a.attrs({
   className: "navbar-brand m-0 p-0",
 })``;
 
-export const LogoWrapper = styled.a.attrs({
-  className: "",
-})``;
-
 export const Nav = styled.div.attrs({
   className: "navbar navbar-expand-lg px-3",
 })`

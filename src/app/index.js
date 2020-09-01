@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ToastContainer, Slide } from "react-toastify";
 // components
-import { NavBar } from "../components/NavBar";
+import NavBar from "../components/NavBar";
 import { Dashboard } from "../components/Dashboard";
 import { Sidebar } from "../components/Sidebar";
 // styles
