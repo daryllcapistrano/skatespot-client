@@ -1,7 +1,7 @@
 import React from "react";
+import Logo from "../Logo";
 import { IconContext } from "react-icons";
 import { FcMenu } from "react-icons/fc";
-import Logo from "../Logo";
 
 import {
   Nav,
