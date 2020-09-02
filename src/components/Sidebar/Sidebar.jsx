@@ -9,10 +9,21 @@ import {
   LinkWrapper,
 } from "./styles";
 
+import { ReactComponent as MySVG } from "../../assets/images/Map_light_Undraw.svg";
+
 const Sidebar = () => {
   return (
     <Wrapper id="navigation">
       <List>
+        <div
+          style={{
+            display: `flex`,
+            justifyContent: `center`,
+            padding: `0.25em`,
+          }}
+        >
+          <MySVG width={200} height={200} />
+        </div>
         <ListItem>
           <Button>
             <LinkWrapper to="/">
@@ -21,7 +32,7 @@ const Sidebar = () => {
                   <FaHome color="#ffffff" />
                 </div>
                 <div>
-                  <ListItemText>Home</ListItemText>
+                  <ListItemText>home</ListItemText>
                 </div>
               </div>
             </LinkWrapper>
@@ -35,26 +46,12 @@ const Sidebar = () => {
                   <FaPlus color="#ffffff" />
                 </div>
                 <div>
-                  <ListItemText>Add New Spot</ListItemText>
+                  <ListItemText>add new spot</ListItemText>
                 </div>
               </div>
             </LinkWrapper>
           </Button>
         </ListItem>
-        {/* <ListItem>
-          <Button>
-            <LinkWrapper to="/skateparks/list">
-              <div>
-                <div>
-                  <FaListUl color="#ffffff" />
-                </div>
-                <div>
-                  <ListItemText>List All Spots</ListItemText>
-                </div>
-              </div>
-            </LinkWrapper>
-          </Button>
-        </ListItem> */}
       </List>
     </Wrapper>
   );

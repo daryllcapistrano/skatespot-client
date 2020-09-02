@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import api from "../../api";
-import { notifyCreateSuccess } from "../../utils/";
+import { notifyCreateSuccess } from "../../components/utils/";
 // Style Imports
 import {
   Title,
@@ -124,7 +124,7 @@ class SkateparkInsert extends Component {
         <div className="row p-0 m-0" style={{ height: `100vh` }}>
           <div className="col-lg-6">
             <PageWrapper>
-              <Title>Add Skatepark</Title>
+              <Title>save a new spot</Title>
               <InputText
                 type="text"
                 value={name}

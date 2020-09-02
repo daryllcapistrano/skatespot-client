@@ -13,13 +13,14 @@ export const List = styled.ul`
   list-style-type: none;
   height: 100%;
   margin: 0;
-  padding: 6.5em 0;
+  padding: 0;
 `;
 export const ListItem = styled.li`
   margin: 0.3em;
 `;
 export const ListItemText = styled.span`
   color: #ffffff;
+  text-transform: capitalize;
 `;
 
 export const Button = styled.button.attrs({

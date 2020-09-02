@@ -20,6 +20,7 @@ export const InputText = styled.input.attrs({
   border: 0;
   border-radius: 3px;
   background-color: #272d2e;
+  outline: none;
 `;
 
 export const Button = styled.button.attrs({

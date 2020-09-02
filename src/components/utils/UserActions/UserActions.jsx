@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import api from "../../api";
+import api from "../../../api";
 import { notifyDeleteSuccess } from "../Notifications";
 import { Update, Delete, Details } from "./styles";
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import api from "../../api";
 
-import { UpdateSkatepark, DeleteSkatepark } from "../../utils/";
+import { UpdateSkatepark, DeleteSkatepark } from "../../components/utils";
 import { SpotCard } from "../../components/Cards";
 
 class SkateparkDetail extends Component {
@@ -52,7 +52,7 @@ class SkateparkDetail extends Component {
     } = this.state;
 
     return (
-      <div className="container m-0">
+      <div className="container p-1 m-1">
         <div className="row" style={{ height: `100vh` }}>
           <div className="col-md-6">
             <SpotCard

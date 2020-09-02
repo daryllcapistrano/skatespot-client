@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import api from "../../api";
 import { Thumbnail } from "../../components/Cards";
-import { Wrapper, ContainerRow, ContainerCol } from "./styles";
+import { Wrapper, Row, Col } from "./styles";
 
 class SkateparkAll extends Component {
   constructor(props) {
@@ -27,9 +27,9 @@ class SkateparkAll extends Component {
     return (
       <>
         <Wrapper>
-          <ContainerRow>
+          <Row>
             {this.state.skateparks.map((skatepark, index) => (
-              <ContainerCol key={index}>
+              <Col key={index}>
                 <Thumbnail
                   id={skatepark._id}
                   image={skatepark.image}
@@ -39,9 +39,9 @@ class SkateparkAll extends Component {
                   state={skatepark.state}
                   location={skatepark.location}
                 />
-              </ContainerCol>
+              </Col>
             ))}
-          </ContainerRow>
+          </Row>
         </Wrapper>
       </>
     );

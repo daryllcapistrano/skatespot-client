@@ -2,18 +2,18 @@ import React from "react";
 import { LogoWrapper } from "./styles";
 
 import { IconContext } from "react-icons";
-import { FaMapPin } from "react-icons/fa";
+import { IoMdPin } from "react-icons/io";
 
 function Logo() {
   return (
     <LogoWrapper href="/">
       <IconContext.Provider
         value={{
-          color: "red",
+          color: "#FF0605",
           size: "1.75rem",
         }}
       >
-        <FaMapPin />
+        <IoMdPin />
       </IconContext.Provider>
     </LogoWrapper>
   );

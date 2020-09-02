@@ -6,12 +6,12 @@ export const Nav = styled.div.attrs({
   className: "navbar navbar-expand-lg",
 })`
   background-color: ${mainBGColor};
-  border-bottom: 0.15em solid #272c2e;
+  border-bottom: 1px solid #272c2e;
   justify-content: center;
 `;
 
 export const Title = styled(Link).attrs({
-  className: "navbar-brand m-2 p-0",
+  className: "navbar-brand p-0",
 })`
   font-family: "Monoton", cursive;
   font-size: 3em;

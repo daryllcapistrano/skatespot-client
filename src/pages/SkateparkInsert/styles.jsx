@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const Title = styled.h1.attrs({
-  className: "h1",
-})``;
+export const Title = styled.h1.attrs({ className: "m-2" })`
+  text-transform: Capitalize;
+`;
 
 export const PageWrapper = styled.div.attrs({
-  className: "form-group mx-5 py-4",
+  className: "form-group py-4",
 })`
   color: #ffffff;
 `;
