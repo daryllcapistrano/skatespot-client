@@ -7,11 +7,12 @@ export const Nav = styled.div.attrs({
 })`
   background-color: ${mainBGColor};
   border-bottom: 1px solid #272c2e;
+  padding-bottom: 0;
   justify-content: center;
 `;
 
 export const Title = styled(Link).attrs({
-  className: "navbar-brand p-0",
+  className: "navbar-brand p-0 m-0",
 })`
   font-family: "Monoton", cursive;
   font-size: 3em;
@@ -28,23 +29,40 @@ export const MobileMenu = styled.div.attrs({
   className: "collapse navbar-collapse",
 })``;
 
-export const InnerWrapper = styled.div.attrs({
+export const MobileWrapper = styled.div.attrs({
   className: "navbar-nav",
-})``;
+})`
+  flex-direction: row;
+  justify-content: space-evenly;
+`;
 
 export const NavItem = styled.div.attrs({
   className: "nav-item",
 })`
+  :hover {
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+  }
   @media (min-width: 992px) {
     display: none;
   }
 `;
 
 export const NavLink = styled(Link).attrs({
-  className: "nav-link",
+  className: "nav-link p-1",
 })`
-  color: #8693ab;
-  :hover {
-    color: #8693ab;
+  color: #ffffff;
+  ${"" /* :hover {
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+  } */}
+`;
+
+export const LinkWrapper = styled.div.attrs({})`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  @media (max-width: 991px) {
+    display: none;
   }
 `;

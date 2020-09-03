@@ -1,14 +1,8 @@
 import styled from "styled-components";
 
-export const Title = styled.h1.attrs({
-  className: "h1",
-})``;
-
 export const PageWrapper = styled.div.attrs({
-  className: "form-group mx-5 py-4",
-})`
-  color: #ffffff;
-`;
+  className: "px-3 py-4",
+})``;
 
 export const Label = styled.label.attrs({
   className: "m-0",

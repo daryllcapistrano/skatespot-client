@@ -4,6 +4,8 @@ import api from "../../api";
 import { UpdateSkatepark, DeleteSkatepark } from "../../components/utils";
 import { SpotCard } from "../../components/Cards";
 
+import { PageWrapper } from "./styles";
+
 class SkateparkDetail extends Component {
   constructor(props) {
     super(props);
@@ -52,7 +54,7 @@ class SkateparkDetail extends Component {
     } = this.state;
 
     return (
-      <div className="container p-1 m-1">
+      <PageWrapper>
         <div className="row" style={{ height: `100vh` }}>
           <div className="col-md-6">
             <SpotCard
@@ -72,7 +74,7 @@ class SkateparkDetail extends Component {
             <DeleteSkatepark id={this.state.id} />
           </div>
         </div>
-      </div>
+      </PageWrapper>
     );
   }
 }

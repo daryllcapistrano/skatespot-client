@@ -1,15 +1,9 @@
 import React, { Component } from "react";
 import api from "../../api";
 import { notifyUpdateSuccess } from "../../components/utils/";
+import { SpotCard } from "../../components/Cards";
 // Style Imports
-import {
-  Title,
-  PageWrapper,
-  Label,
-  InputText,
-  Button,
-  CancelButton,
-} from "./styles";
+import { PageWrapper, Label, InputText, Button, CancelButton } from "./styles";
 
 class SkateparkUpdate extends Component {
   constructor(props) {
@@ -140,71 +134,88 @@ class SkateparkUpdate extends Component {
 
     return (
       <PageWrapper>
-        <Title>Update {name}</Title>
+        <div className="row" style={{ height: `100vh` }}>
+          <div className="col-md-6">
+            <SpotCard
+              id={this.state.id}
+              name={this.statename}
+              terrain={this.state.terrain}
+              location={this.state.location}
+              city={this.state.city}
+              state={this.state.state}
+              country={this.state.country}
+              rating={this.state.rating}
+              image={this.state.image}
+            />
+          </div>
+          <div className="col-md-6">
+            <Label>Name: </Label>
+            <InputText
+              type="text"
+              value={name}
+              onChange={this.handleChangeInputName}
+            />
 
-        <Label>Name: </Label>
-        <InputText
-          type="text"
-          value={name}
-          onChange={this.handleChangeInputName}
-        />
+            <Label>Terrain: </Label>
+            <InputText
+              type="text"
+              value={terrain}
+              onChange={this.handleChangeInputTerrain}
+            />
 
-        <Label>Terrain: </Label>
-        <InputText
-          type="text"
-          value={terrain}
-          onChange={this.handleChangeInputTerrain}
-        />
+            <Label>Location: </Label>
+            <InputText
+              type="text"
+              value={location}
+              onChange={this.handleChangeInputLocation}
+            />
 
-        <Label>Location: </Label>
-        <InputText
-          type="text"
-          value={location}
-          onChange={this.handleChangeInputLocation}
-        />
+            <Label>City: </Label>
+            <InputText
+              type="text"
+              value={city}
+              onChange={this.handleChangeInputCity}
+            />
 
-        <Label>City: </Label>
-        <InputText
-          type="text"
-          value={city}
-          onChange={this.handleChangeInputCity}
-        />
+            <Label>State: </Label>
+            <InputText
+              type="text"
+              value={state}
+              onChange={this.handleChangeInputState}
+            />
 
-        <Label>State: </Label>
-        <InputText
-          type="text"
-          value={state}
-          onChange={this.handleChangeInputState}
-        />
+            <Label>Country: </Label>
+            <InputText
+              type="text"
+              value={country}
+              onChange={this.handleChangeInputCountry}
+            />
 
-        <Label>Country: </Label>
-        <InputText
-          type="text"
-          value={country}
-          onChange={this.handleChangeInputCountry}
-        />
+            <Label>Rating: </Label>
+            <InputText
+              type="number"
+              step="0.1"
+              lang="en-US"
+              min="0"
+              max="10"
+              pattern="[0-9]+([,\.][0-9]+)?"
+              value={rating}
+              onChange={this.handleChangeInputRating}
+            />
 
-        <Label>Rating: </Label>
-        <InputText
-          type="number"
-          step="0.1"
-          lang="en-US"
-          min="0"
-          max="10"
-          pattern="[0-9]+([,\.][0-9]+)?"
-          value={rating}
-          onChange={this.handleChangeInputRating}
-        />
+            <Label>Image: </Label>
+            <InputText
+              type="text"
+              value={image}
+              onChange={this.handleChangeInputImage}
+            />
 
-        <Label>Image: </Label>
-        <InputText
-          type="text"
-          value={image}
-          onChange={this.handleChangeInputImage}
-        />
-
-        <Button onClick={this.handleUpdateSkatepark}>Update Skatepark</Button>
-        <CancelButton href={"/"}>Cancel</CancelButton>
+            <Button onClick={this.handleUpdateSkatepark}>
+              Update Skatepark
+            </Button>
+            <CancelButton href={"/"}>Cancel</CancelButton>
+          </div>
+        </div>
       </PageWrapper>
     );
   }

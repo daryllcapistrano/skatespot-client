@@ -2,59 +2,70 @@ import React from "react";
 import Logo from "../Logo";
 import { IconContext } from "react-icons";
 import { FcMenu } from "react-icons/fc";
-// import { RiMapPinAddFill } from "react-icons/ri";
 
 import {
   Nav,
   Title,
   Menu,
   MobileMenu,
-  InnerWrapper,
+  MobileWrapper,
   NavItem,
   NavLink,
+  LinkWrapper,
 } from "./styles";
 
 function NavBar() {
   return (
     <Nav>
       <Title to="/">
-        Sick Spot
+        Sick SpotS
         <Logo />
       </Title>
-      <Menu
-        type="button"
-        data-toggle="collapse"
-        data-target="#collapseThis"
-        aria-controls="collapseThis"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <IconContext.Provider
-          value={{
-            size: "1.25rem",
-          }}
+      <LinkWrapper>
+        <NavLink to="/signup">
+          <button className="btn btn-outline-dark  " type="button">
+            Sign Up
+          </button>
+        </NavLink>
+        <NavLink to="/login">
+          <button className="btn btn-dark " type="button">
+            Login
+          </button>
+        </NavLink>
+      </LinkWrapper>
+      <div>
+        <Menu
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseThis"
+          aria-controls="collapseThis"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <FcMenu />
-        </IconContext.Provider>
-      </Menu>
+          <IconContext.Provider
+            value={{
+              size: "1.25rem",
+            }}
+          >
+            <FcMenu />
+          </IconContext.Provider>
+        </Menu>
+      </div>
       <MobileMenu id="collapseThis">
-        <InnerWrapper>
+        <MobileWrapper>
           <NavItem>
-            <NavLink to="/skateparks/create">
-              {/* <IconContext.Provider
-                value={{
-                  size: "1.25rem",
-                }}
-              >
-                <RiMapPinAddFill />
-              </IconContext.Provider> */}
-              Add A New Spot
-            </NavLink>
+            <NavLink to="/">Dashboard</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/skateparks/list">List Skateparks</NavLink>
+            <NavLink to="/skateparks/create">Add A Spot</NavLink>
           </NavItem>
-        </InnerWrapper>
+          <NavItem>
+            <NavLink to="/signup">Sign Up</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/login">Login</NavLink>
+          </NavItem>
+        </MobileWrapper>
       </MobileMenu>
     </Nav>
   );

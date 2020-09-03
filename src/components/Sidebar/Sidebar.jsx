@@ -14,41 +14,29 @@ import { ReactComponent as MySVG } from "../../assets/images/Map_light_Undraw.sv
 const Sidebar = () => {
   return (
     <Wrapper id="navigation">
+      <div
+        style={{
+          display: `flex`,
+          justifyContent: `center`,
+          padding: `1.25em`,
+        }}
+      >
+        <MySVG width={200} height={100} />
+      </div>
       <List>
-        <div
-          style={{
-            display: `flex`,
-            justifyContent: `center`,
-            padding: `0.25em`,
-          }}
-        >
-          <MySVG width={200} height={200} />
-        </div>
         <ListItem>
           <Button>
             <LinkWrapper to="/">
-              <div>
-                <div>
-                  <FaHome color="#ffffff" />
-                </div>
-                <div>
-                  <ListItemText>home</ListItemText>
-                </div>
-              </div>
+              <FaHome color="#ffffff" />
+              <ListItemText>home</ListItemText>
             </LinkWrapper>
           </Button>
         </ListItem>
         <ListItem>
           <Button>
             <LinkWrapper to="/skateparks/create">
-              <div>
-                <div>
-                  <FaPlus color="#ffffff" />
-                </div>
-                <div>
-                  <ListItemText>add new spot</ListItemText>
-                </div>
-              </div>
+              <FaPlus color="#ffffff" />
+              <ListItemText>add new spot</ListItemText>
             </LinkWrapper>
           </Button>
         </ListItem>
