@@ -9,6 +9,8 @@ import {
   LinkWrapper,
 } from "./styles";
 
+import Profile from "../Users/profile";
+
 import { ReactComponent as MySVG } from "../../assets/images/Map_light_Undraw.svg";
 
 const Sidebar = () => {
@@ -39,6 +41,9 @@ const Sidebar = () => {
               <ListItemText>add new spot</ListItemText>
             </LinkWrapper>
           </Button>
+        </ListItem>
+        <ListItem>
+          <Profile />
         </ListItem>
       </List>
     </Wrapper>
