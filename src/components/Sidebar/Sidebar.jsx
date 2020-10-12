@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPlus, FaHome } from "react-icons/fa";
+// import { FaPlus, FaHome } from "react-icons/fa";
 import {
   Wrapper,
   List,
@@ -10,6 +10,8 @@ import {
 } from "./styles";
 
 import Profile from "../Users/profile";
+import LoginButton from "../Auth0/login";
+import LogoutButton from "../Auth0/logout";
 
 import { ReactComponent as MySVG } from "../../assets/images/Map_light_Undraw.svg";
 
@@ -29,7 +31,7 @@ const Sidebar = () => {
         <ListItem>
           <Button>
             <LinkWrapper to="/">
-              <FaHome color="#ffffff" />
+              {/* <FaHome color="#ffffff" /> */}
               <ListItemText>home</ListItemText>
             </LinkWrapper>
           </Button>
@@ -37,14 +39,26 @@ const Sidebar = () => {
         <ListItem>
           <Button>
             <LinkWrapper to="/skateparks/create">
-              <FaPlus color="#ffffff" />
+              {/* <FaPlus color="#ffffff" /> */}
               <ListItemText>add new spot</ListItemText>
             </LinkWrapper>
           </Button>
         </ListItem>
         <ListItem>
-          <Profile />
+          <LoginButton />
         </ListItem>
+        <ListItem>
+          <LogoutButton />
+        </ListItem>
+        <div
+          style={{
+            marginTop: `5em`,
+            paddingTop: `2em`,
+            borderTop: `2px solid #1e2225`,
+          }}
+        >
+          <Profile />
+        </div>
       </List>
     </Wrapper>
   );

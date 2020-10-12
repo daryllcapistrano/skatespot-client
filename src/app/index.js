@@ -33,7 +33,7 @@ function App() {
         draggable
         pauseOnHover
       />
-      <div className="row" style={{ margin: `0`, height: `100vh` }}>
+      <div className="row" style={{ margin: `0` }}>
         <Sidebar />
         <Dashboard>
           <NavBar />

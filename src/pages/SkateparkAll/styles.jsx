@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div.attrs({
   className: "px-3 py-4",
-})``;
+})`
+  overflow: scroll;
+  height: 90vh;
+`;
 
 export const Row = styled.div.attrs({
   className: "row p-0 m-0",

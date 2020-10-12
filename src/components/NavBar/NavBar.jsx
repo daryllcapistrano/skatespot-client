@@ -2,8 +2,8 @@ import React from "react";
 import Logo from "../Logo";
 import { IconContext } from "react-icons";
 import { FcMenu } from "react-icons/fc";
-import LoginButton from "../Auth0/login";
-import LogoutButton from "../Auth0/logout";
+// import LoginButton from "../Auth0/login";
+// import LogoutButton from "../Auth0/logout";
 
 import {
   Nav,
@@ -20,17 +20,17 @@ function NavBar() {
   return (
     <Nav>
       <Title to="/">
-        Sick SpotS
+        Sick Spots
         <Logo />
       </Title>
       <LinkWrapper>
-        <NavLink to="/signup">
+        {/* <NavLink to="/signup">
           <button className="btn btn-outline-dark" type="button">
             Sign Up
           </button>
-        </NavLink>
-        <LoginButton />
-        <LogoutButton />
+        </NavLink> */}
+        {/* <LoginButton />
+        <LogoutButton /> */}
       </LinkWrapper>
       <div>
         <Menu
