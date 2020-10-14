@@ -5,9 +5,10 @@ export const Title = styled.h1.attrs({ className: "m-2" })`
 `;
 
 export const PageWrapper = styled.div.attrs({
-  className: "form-group py-4",
+  className: "px-3 py-4",
 })`
-  color: #ffffff;
+  overflow: scroll;
+  height: 90vh;
 `;
 
 export const Label = styled.label.attrs({
@@ -29,3 +30,21 @@ export const Button = styled.button.attrs({
 export const CancelButton = styled.a.attrs({
   className: `btn btn-danger m-2`,
 })``;
+
+// export const Wrapper = styled.div.attrs({
+//   className: "px-3 py-4",
+// })`
+//   overflow: scroll;
+//   height: 90vh;
+//   width: 100vw;
+// `;
+
+// export const Row = styled.div.attrs({
+//   className: "row p-0 m-0",
+// })``;
+
+// export const Col = styled.div.attrs({
+//   className: "col-xl-3 col-lg-4 col-md-4",
+// })`
+//   padding: 0.25em;
+// `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div.attrs({
-  className: "col-md-2 d-none d-lg-block",
+  className: "col-lg-2 d-none d-lg-block",
 })`
   background-color: #272c2e;
   padding: 0em;

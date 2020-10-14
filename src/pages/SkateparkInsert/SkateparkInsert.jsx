@@ -4,12 +4,14 @@ import { notifyCreateSuccess } from "../../components/utils/";
 // Style Imports
 import {
   Title,
-  PageWrapper,
+  // PageWrapper,
   // Label,
   InputText,
   Button,
   CancelButton,
 } from "./styles";
+
+import { Wrapper, Row } from "../styles";
 
 class SkateparkInsert extends Component {
   constructor(props) {
@@ -120,83 +122,82 @@ class SkateparkInsert extends Component {
       image,
     } = this.state;
     return (
-      <>
-        <div className="row p-0 m-0" style={{ height: `100vh` }}>
+      <Wrapper style={{ width: `80vw` }}>
+        {/* fix width styling above to fit container */}
+        <Row>
           <div className="col-lg-6">
-            <PageWrapper>
-              <Title>save a new spot</Title>
-              <InputText
-                type="text"
-                value={name}
-                placeholder="Spot Name"
-                onChange={this.handleChangeInputName}
-              />
+            {/* <PageWrapper> */}
+            <Title>save a new spot</Title>
+            <InputText
+              type="text"
+              value={name}
+              placeholder="Spot Name"
+              onChange={this.handleChangeInputName}
+            />
 
-              <InputText
-                type="text"
-                value={terrain}
-                placeholder="Terrain Type"
-                onChange={this.handleChangeInputTerrain}
-              />
+            <InputText
+              type="text"
+              value={terrain}
+              placeholder="Terrain Type"
+              onChange={this.handleChangeInputTerrain}
+            />
 
-              <InputText
-                type="text"
-                value={location}
-                placeholder="Location"
-                onChange={this.handleChangeInputLocation}
-              />
+            <InputText
+              type="text"
+              value={location}
+              placeholder="Location"
+              onChange={this.handleChangeInputLocation}
+            />
 
-              <InputText
-                type="text"
-                value={city}
-                placeholder="City"
-                onChange={this.handleChangeInputCity}
-              />
+            <InputText
+              type="text"
+              value={city}
+              placeholder="City"
+              onChange={this.handleChangeInputCity}
+            />
 
-              <InputText
-                type="text"
-                value={state}
-                placeholder="State"
-                onChange={this.handleChangeInputState}
-              />
+            <InputText
+              type="text"
+              value={state}
+              placeholder="State"
+              onChange={this.handleChangeInputState}
+            />
 
-              <InputText
-                type="text"
-                value={country}
-                placeholder="Country"
-                onChange={this.handleChangeInputCountry}
-              />
+            <InputText
+              type="text"
+              value={country}
+              placeholder="Country"
+              onChange={this.handleChangeInputCountry}
+            />
 
-              <InputText
-                type="number"
-                step="1"
-                lang="en-US"
-                min="0"
-                max="10"
-                pattern="[1-9]|10"
-                value={rating}
-                placeholder="Rating 0-10"
-                onChange={this.handleChangeInputRating}
-              />
+            <InputText
+              type="number"
+              step="1"
+              lang="en-US"
+              min="0"
+              max="10"
+              pattern="[1-9]|10"
+              value={rating}
+              placeholder="Rating 0-10"
+              onChange={this.handleChangeInputRating}
+            />
 
-              <InputText
-                type="text"
-                value={image}
-                placeholder="Add An Image"
-                onChange={this.handleChangeInputImage}
-              />
+            <InputText
+              type="text"
+              value={image}
+              placeholder="Add An Image"
+              onChange={this.handleChangeInputImage}
+            />
 
-              <Button onClick={this.handleIncludeSkatepark}>
-                Add Skatepark
-              </Button>
-              <CancelButton href={"/"}>Cancel</CancelButton>
-            </PageWrapper>
+            <Button onClick={this.handleIncludeSkatepark}>Add Skatepark</Button>
+            <CancelButton href={"/"}>Cancel</CancelButton>
+            {/* </PageWrapper> */}
           </div>
           <div className="col-lg-6">
-            <h1>Add SVG Animation</h1>
+            <p>Add SVG Animation</p>
           </div>
-        </div>
-      </>
+        </Row>
+      </Wrapper>
     );
   }
 }

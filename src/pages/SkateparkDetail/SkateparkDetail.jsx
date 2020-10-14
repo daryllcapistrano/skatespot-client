@@ -4,7 +4,7 @@ import api from "../../api";
 import { UpdateSkatepark, DeleteSkatepark } from "../../components/utils";
 import { SpotCard } from "../../components/Cards";
 
-import { PageWrapper } from "./styles";
+import { Wrapper, Row, Col } from "../styles";
 
 class SkateparkDetail extends Component {
   constructor(props) {
@@ -54,9 +54,9 @@ class SkateparkDetail extends Component {
     } = this.state;
 
     return (
-      <PageWrapper>
-        <div className="row" style={{ height: `100vh` }}>
-          <div className="col-md-6">
+      <Wrapper>
+        <Row>
+          <div className="col-md-6" style={{ padding: `.25em` }}>
             <SpotCard
               id={id}
               name={name}
@@ -69,12 +69,12 @@ class SkateparkDetail extends Component {
               image={image}
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6" style={{ padding: `.25em` }}>
             <UpdateSkatepark id={this.state.id} />
             <DeleteSkatepark id={this.state.id} />
           </div>
-        </div>
-      </PageWrapper>
+        </Row>
+      </Wrapper>
     );
   }
 }
