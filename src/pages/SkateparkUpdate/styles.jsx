@@ -5,7 +5,6 @@ export const PageWrapper = styled.div.attrs({
 })`
   overflow: scroll;
   height: 90vh;
-  width: 100vw;
 `;
 
 export const Label = styled.label.attrs({

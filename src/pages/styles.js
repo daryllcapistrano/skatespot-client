@@ -8,7 +8,7 @@ export const Wrapper = styled.div.attrs({
 `;
 
 export const Row = styled.div.attrs({
-  className: "row p-0 m-0",
+  className: "row",
 })``;
 
 export const Col = styled.div.attrs({

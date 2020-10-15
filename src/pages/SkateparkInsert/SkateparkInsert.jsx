@@ -11,7 +11,7 @@ import {
   CancelButton,
 } from "./styles";
 
-import { Wrapper, Row } from "../styles";
+import { Wrapper, Row, Col } from "../styles";
 
 class SkateparkInsert extends Component {
   constructor(props) {
@@ -121,12 +121,12 @@ class SkateparkInsert extends Component {
       rating,
       image,
     } = this.state;
+
     return (
-      <Wrapper style={{ width: `80vw` }}>
-        {/* fix width styling above to fit container */}
+      <Wrapper>
         <Row>
-          <div className="col-lg-6">
-            {/* <PageWrapper> */}
+          {/* fix above styles to keep row width consistent across pages */}
+          <Col>
             <Title>save a new spot</Title>
             <InputText
               type="text"
@@ -191,11 +191,13 @@ class SkateparkInsert extends Component {
 
             <Button onClick={this.handleIncludeSkatepark}>Add Skatepark</Button>
             <CancelButton href={"/"}>Cancel</CancelButton>
-            {/* </PageWrapper> */}
-          </div>
-          <div className="col-lg-6">
+          </Col>
+          <Col>
             <p>Add SVG Animation</p>
-          </div>
+          </Col>
+          <Col>
+            <p>Add SVG Animation</p>
+          </Col>
         </Row>
       </Wrapper>
     );

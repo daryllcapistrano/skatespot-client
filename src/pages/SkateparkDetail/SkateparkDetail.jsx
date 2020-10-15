@@ -4,7 +4,7 @@ import api from "../../api";
 import { UpdateSkatepark, DeleteSkatepark } from "../../components/utils";
 import { SpotCard } from "../../components/Cards";
 
-import { Wrapper, Row, Col } from "../styles";
+import { Wrapper, Row } from "../styles";
 
 class SkateparkDetail extends Component {
   constructor(props) {
