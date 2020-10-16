@@ -70,8 +70,8 @@ class SkateparkDetail extends Component {
             />
           </div>
           <div className="col-md-6" style={{ padding: `.25em` }}>
-            <UpdateSkatepark id={this.state.id} />
-            <DeleteSkatepark id={this.state.id} />
+            <UpdateSkatepark {...this.state} />
+            <DeleteSkatepark {...this.state} />
           </div>
         </Row>
       </Wrapper>
