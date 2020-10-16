@@ -20,13 +20,15 @@ import {
 
 function App() {
   const uri = "https://127.0.0.1:8000";
+  const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
   return (
     <Router>
       <GlobalStyles />
       <Auth0Provider
-        domain="dev-igzgv951.us.auth0.com"
-        clientId="ma2vuxuKiM6Uul4f6c2Yej6ApSJaKPz9"
+        domain={domain}
+        clientId={clientId}
         // window.location.origin from tutorial was returning localhost which caused Auth0 to break
         redirectUri={uri}
       >

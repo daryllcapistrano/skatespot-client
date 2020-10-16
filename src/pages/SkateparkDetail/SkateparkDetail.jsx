@@ -41,33 +41,11 @@ class SkateparkDetail extends Component {
   };
 
   render() {
-    const {
-      id,
-      name,
-      terrain,
-      location,
-      city,
-      state,
-      country,
-      rating,
-      image,
-    } = this.state;
-
     return (
       <Wrapper>
         <Row>
           <div className="col-md-6" style={{ padding: `.25em` }}>
-            <SpotCard
-              id={id}
-              name={name}
-              terrain={terrain}
-              location={location}
-              city={city}
-              state={state}
-              country={country}
-              rating={rating}
-              image={image}
-            />
+            <SpotCard {...this.state} />
           </div>
           <div className="col-md-6" style={{ padding: `.25em` }}>
             <UpdateSkatepark {...this.state} />

@@ -24,3 +24,6 @@ yarn-error.log*
 
 # todos
 /TODO.md
+
+# env
+.env

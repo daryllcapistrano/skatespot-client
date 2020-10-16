@@ -24,7 +24,7 @@ class SkateparkDetail extends Component {
 
 class DeleteSkatepark extends Component {
   deleteUser = () => {
-    if (window.confirm(`Permanently delete: ${this.props.name}?`)) {
+    if (window.confirm(`Permanently delete ${this.props.name}?`)) {
       api.deleteSkateparkById(this.props.id);
       notifyDeleteSuccess();
     }
