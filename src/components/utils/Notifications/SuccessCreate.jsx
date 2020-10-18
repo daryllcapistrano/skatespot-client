@@ -14,7 +14,7 @@ const ToastMessage = () => (
     }}
   >
     <FaRegCheckCircle />
-    <ToastText>Skatepark Created</ToastText>
+    <ToastText>Skatepark Added</ToastText>
   </IconContext.Provider>
 );
 

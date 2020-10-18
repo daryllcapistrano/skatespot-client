@@ -19,19 +19,16 @@ import {
 } from "../pages";
 
 function App() {
+  // make variable because window.location.origin from tutorial was returning localhost which caused Auth0 to break
   const uri = "https://127.0.0.1:8000";
+
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
   return (
     <Router>
       <GlobalStyles />
-      <Auth0Provider
-        domain={domain}
-        clientId={clientId}
-        // window.location.origin from tutorial was returning localhost which caused Auth0 to break
-        redirectUri={uri}
-      >
+      <Auth0Provider domain={domain} clientId={clientId} redirectUri={uri}>
         <ToastContainer
           transition={Slide}
           position="top-right"

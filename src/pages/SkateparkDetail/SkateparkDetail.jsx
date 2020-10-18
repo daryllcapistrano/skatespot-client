@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import api from "../../api";
 
 import { UpdateSkatepark, DeleteSkatepark } from "../../components/utils";
-import { SpotCard } from "../../components/Cards";
+import { Details } from "../../components/Cards";
 
 import { Wrapper, Row } from "../styles";
 
@@ -44,10 +44,13 @@ class SkateparkDetail extends Component {
     return (
       <Wrapper>
         <Row>
-          <div className="col-md-6" style={{ padding: `.25em` }}>
-            <SpotCard {...this.state} />
+          <div className="col-md-12" style={{ padding: `.25em` }}>
+            <Details {...this.state} />
           </div>
-          <div className="col-md-6" style={{ padding: `.25em` }}>
+          <div
+            className="col-md-12"
+            style={{ padding: `.25em`, textAlign: `center` }}
+          >
             <UpdateSkatepark {...this.state} />
             <DeleteSkatepark {...this.state} />
           </div>

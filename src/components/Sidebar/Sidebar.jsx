@@ -50,15 +50,8 @@ const Sidebar = () => {
         <ListItem>
           <LogoutButton />
         </ListItem>
-        <div
-          style={{
-            marginTop: `5em`,
-            paddingTop: `2em`,
-            borderTop: `2px solid #1e2225`,
-          }}
-        >
-          <Profile />
-        </div>
+        {/* User Login Info */}
+        <Profile />
       </List>
     </Wrapper>
   );

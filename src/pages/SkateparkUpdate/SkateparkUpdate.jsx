@@ -136,17 +136,7 @@ class SkateparkUpdate extends Component {
       <PageWrapper>
         <div className="row" style={{ height: `100vh` }}>
           <div className="col-md-6">
-            <SpotCard
-              id={this.state.id}
-              name={this.statename}
-              terrain={this.state.terrain}
-              location={this.state.location}
-              city={this.state.city}
-              state={this.state.state}
-              country={this.state.country}
-              rating={this.state.rating}
-              image={this.state.image}
-            />
+            <SpotCard {...this.state} />
           </div>
           <div className="col-md-6">
             <Label>Name: </Label>

@@ -9,29 +9,32 @@ const Profile = () => {
   }
   if (isAuthenticated) {
     return (
-      <div>
-        <div style={{ textAlign: `center` }}>
+      <>
+        <div
+          style={{
+            textAlign: `center`,
+            marginTop: `2em`,
+            paddingTop: `2em`,
+            borderTop: `2px solid #1e2225`,
+          }}
+        >
           <img
             src={user.picture}
             alt={user.name}
-            style={{ width: `50%`, marginBottom: `2em` }}
+            style={{ width: `50%`, borderRadius: `50%` }}
           />
-        </div>
-        <div>
           <div
             style={{
               fontSize: `1em`,
               textTransform: `uppercase`,
               margin: `.25em`,
+              padding: `1em`,
             }}
           >
             {user.name}
           </div>
         </div>
-        <div>
-          <div style={{ fontSize: `.75em`, margin: `.25em` }}>{user.email}</div>
-        </div>
-      </div>
+      </>
     );
   }
   return <div>user not logged in</div>;
