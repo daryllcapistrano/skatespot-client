@@ -18,17 +18,16 @@ const ToastMessage = () => (
   </IconContext.Provider>
 );
 
+const options = {
+  onClose: () => (window.location.href = "/"),
+  position: "top-center",
+  autoClose: 1000,
+  hideProgressBar: true,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+};
+
 export const notifyDeleteSuccess = () =>
-  toast.success(
-    <ToastMessage />,
-    { onClose: () => (window.location.href = "/") },
-    {
-      position: "top-right",
-      autoClose: 1500,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    }
-  );
+  toast.success(<ToastMessage />, options);

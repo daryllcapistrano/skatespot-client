@@ -5,7 +5,18 @@ const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading ...</div>;
+    return (
+      <div
+        style={{
+          textAlign: `center`,
+          marginTop: `2em`,
+          paddingTop: `2em`,
+          borderTop: `2px solid #1e2225`,
+        }}
+      >
+        <p>Loading ...</p>
+      </div>
+    );
   }
   if (isAuthenticated) {
     return (
@@ -37,7 +48,18 @@ const Profile = () => {
       </>
     );
   }
-  return <div>user not logged in</div>;
+  return (
+    <div
+      style={{
+        textAlign: `center`,
+        marginTop: `2em`,
+        paddingTop: `2em`,
+        borderTop: `2px solid #1e2225`,
+      }}
+    >
+      <p>user is not logged in</p>
+    </div>
+  );
 };
 
 export default Profile;

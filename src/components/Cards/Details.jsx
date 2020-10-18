@@ -7,7 +7,6 @@ function Details(props) {
       <img src={props.image} alt={props.name} style={{ width: `100%` }} />
       <div style={{ padding: `1em` }}>
         <h2>{props.name}</h2>
-        <p>{props.rating}</p>
         <p>{props.location}</p>
         <p>{props.city}</p>
         <p>{props.state}</p>
