@@ -9,7 +9,7 @@ class UpdateSkatepark extends Component {
   };
 
   render() {
-    return <Update onClick={this.updateUser}>Update</Update>;
+    return <Update onClick={this.updateUser}>Edit</Update>;
   }
 }
 class SkateparkDetail extends Component {

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import api from "../../api";
 import { notifyUpdateSuccess } from "../../components/utils/";
-import { SpotCard } from "../../components/Cards";
 // Style Imports
 import { PageWrapper, Label, InputText, Button, CancelButton } from "./styles";
 
@@ -135,10 +134,7 @@ class SkateparkUpdate extends Component {
     return (
       <PageWrapper>
         <div className="row" style={{ height: `100vh` }}>
-          <div className="col-md-6">
-            <SpotCard {...this.state} />
-          </div>
-          <div className="col-md-6">
+          <div className="col">
             <Label>Name: </Label>
             <InputText
               type="text"

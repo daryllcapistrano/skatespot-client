@@ -12,7 +12,7 @@ export const Label = styled.label.attrs({
 })``;
 
 export const InputText = styled.input.attrs({
-  className: "form-control m-1",
+  className: "form-control",
 })`
   border: 0;
   border-radius: 3px;

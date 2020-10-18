@@ -19,7 +19,7 @@ const ToastMessage = () => (
 );
 
 const options = {
-  onClose: () => (window.location.href = "/"),
+  onClose: () => (window.location.href = `/`),
   position: "top-center",
   autoClose: 1000,
   hideProgressBar: true,

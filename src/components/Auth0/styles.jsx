@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Button = styled.button.attrs({
-  className: "btn btn-primary btn-block btn-sm",
+export const Button = styled(Link).attrs({
+  className: "btn btn-primary btn-block p-1 my-3",
   type: "button",
 })`
-  border-radius: 3px;
-  height: 2.5em;
+  border-radius: 5px;
   display: block;
-  padding: 0;
   background-color: #404549;
   border-color: #404549;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 `;

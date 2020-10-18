@@ -21,48 +21,29 @@ export const Title = styled(Link).attrs({
   -webkit-text-fill-color: transparent;
 `;
 
-export const Menu = styled.button.attrs({
+export const BurgerButton = styled.button.attrs({
   className: "navbar-toggler",
+  type: "button",
 })``;
 
 export const MobileMenu = styled.div.attrs({
   className: "collapse navbar-collapse",
 })``;
 
-export const MobileWrapper = styled.div.attrs({
-  className: "navbar-nav",
+export const Button = styled(Link).attrs({
+  className: "btn btn-primary btn-block p-1 my-3",
+  type: "button",
 })`
-  flex-direction: row;
-  justify-content: space-evenly;
+  border-radius: 5px;
+  display: block;
+  background-color: #404549;
+  border-color: #404549;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 `;
 
-export const NavItem = styled.div.attrs({
-  className: "nav-item",
-})`
-  :hover {
-    border-bottom: 1px solid #ffffff;
-    color: #ffffff;
-  }
+export const MobileWrapper = styled.div`
   @media (min-width: 992px) {
-    display: none;
-  }
-`;
-
-export const NavLink = styled(Link).attrs({
-  className: "nav-link p-1",
-})`
-  color: #ffffff;
-  ${"" /* :hover {
-    border-bottom: 1px solid #ffffff;
-    color: #ffffff;
-  } */}
-`;
-
-export const LinkWrapper = styled.div.attrs({})`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  @media (max-width: 991px) {
     display: none;
   }
 `;

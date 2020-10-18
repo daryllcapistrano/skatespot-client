@@ -2,18 +2,16 @@ import React from "react";
 import Logo from "../Logo";
 import { IconContext } from "react-icons";
 import { FcMenu } from "react-icons/fc";
-// import LoginButton from "../Auth0/login";
-// import LogoutButton from "../Auth0/logout";
+import LoginButton from "../Auth0/login";
+import LogoutButton from "../Auth0/logout";
 
 import {
   Nav,
   Title,
-  Menu,
+  BurgerButton,
   MobileMenu,
   MobileWrapper,
-  NavItem,
-  NavLink,
-  LinkWrapper,
+  Button,
 } from "./styles";
 
 function NavBar() {
@@ -23,47 +21,27 @@ function NavBar() {
         Sick Spots
         <Logo />
       </Title>
-      <LinkWrapper>
-        {/* <NavLink to="/signup">
-          <button className="btn btn-outline-dark" type="button">
-            Sign Up
-          </button>
-        </NavLink> */}
-        {/* <LoginButton />
-        <LogoutButton /> */}
-      </LinkWrapper>
-      <div>
-        <Menu
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapseThis"
-          aria-controls="collapseThis"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+      <BurgerButton
+        data-toggle="collapse"
+        data-target="#collapseMenu"
+        aria-controls="collapseMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <IconContext.Provider
+          value={{
+            size: "1.25rem",
+          }}
         >
-          <IconContext.Provider
-            value={{
-              size: "1.25rem",
-            }}
-          >
-            <FcMenu />
-          </IconContext.Provider>
-        </Menu>
-      </div>
-      <MobileMenu id="collapseThis">
+          <FcMenu />
+        </IconContext.Provider>
+      </BurgerButton>
+      <MobileMenu id="collapseMenu">
         <MobileWrapper>
-          <NavItem>
-            <NavLink to="/">Dashboard</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/skateparks/create">Add A Spot</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/signup">Sign Up</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/login">Login</NavLink>
-          </NavItem>
+          <Button to="/">Dashboard</Button>
+          <Button to="/skateparks/create">Add Spot</Button>
+          <LoginButton />
+          <LogoutButton />
         </MobileWrapper>
       </MobileMenu>
     </Nav>
