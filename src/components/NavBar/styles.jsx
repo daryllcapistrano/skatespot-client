@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import { mainBGColor } from "../../app/GlobalStyles";
 
 export const Nav = styled.div.attrs({
-  className: "navbar navbar-expand-lg",
+  className: "navbar navbar-expand-lg pb-0",
 })`
   background-color: ${mainBGColor};
   border-bottom: 1px solid #272c2e;
-  padding-bottom: 0;
   justify-content: center;
 `;
 

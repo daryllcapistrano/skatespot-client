@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const Button = styled(Link).attrs({
+export const Button = styled.button.attrs({
   className: "btn btn-primary btn-block p-1 my-3",
   type: "button",
 })`
