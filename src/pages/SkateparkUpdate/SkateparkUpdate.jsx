@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import api from "../../api";
 import { notifyUpdateSuccess } from "../../components/utils/";
 // Style Imports
-import { PageWrapper, Label, InputText, Button, CancelButton } from "./styles";
+import {
+  PageWrapper,
+  Label,
+  InputText,
+  UpdateButton,
+  CancelButton,
+} from "./styles";
 
 class SkateparkUpdate extends Component {
   constructor(props) {
@@ -196,9 +202,9 @@ class SkateparkUpdate extends Component {
               onChange={this.handleChangeInputImage}
             />
 
-            <Button onClick={this.handleUpdateSkatepark}>
+            <UpdateButton onClick={this.handleUpdateSkatepark}>
               Update Skatepark
-            </Button>
+            </UpdateButton>
             <CancelButton href={"/"}>Cancel</CancelButton>
           </div>
         </div>

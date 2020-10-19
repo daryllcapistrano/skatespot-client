@@ -1,7 +1,3 @@
-import {
-  UpdateSkatepark,
-  DeleteSkatepark,
-  SkateparkDetail,
-} from "./UserActions";
+import { EditSkatepark, DeleteSkatepark, SkateparkDetail } from "./UserActions";
 
-export { UpdateSkatepark, DeleteSkatepark, SkateparkDetail };
+export { EditSkatepark, DeleteSkatepark, SkateparkDetail };

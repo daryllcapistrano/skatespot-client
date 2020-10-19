@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { mainBGColor } from "../../app/GlobalStyles";
 
 export const Nav = styled.div.attrs({
-  className: "navbar navbar-expand-lg pb-0",
+  className: "navbar navbar-expand-lg",
 })`
-  background-color: ${mainBGColor};
-  border-bottom: 1px solid #272c2e;
+  background-color: #1e2225;
+  border-bottom: 2px solid #272c2e;
   justify-content: center;
 `;
 
@@ -30,13 +29,11 @@ export const MobileMenu = styled.div.attrs({
 })``;
 
 export const Button = styled(Link).attrs({
-  className: "btn btn-primary btn-block p-1 my-3",
+  className: "btn btn-primary btn-block btn-dark p-1 my-3",
   type: "button",
 })`
   border-radius: 5px;
   display: block;
-  background-color: #404549;
-  border-color: #404549;
   text-transform: uppercase;
   letter-spacing: 2px;
 `;

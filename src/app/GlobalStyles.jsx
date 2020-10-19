@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 // Theme
-export const mainBGColor = "#1e2225";
+// export const mainBGColor = "#1e2225";
 export const mainText = "#ffffff";
 
 export default GlobalStyles;

@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "../Logo";
-import { IconContext } from "react-icons";
-import { FcMenu } from "react-icons/fc";
+import { Rotate as Hamburger } from "hamburger-react";
 import LoginButton from "../Auth0/login";
 import LogoutButton from "../Auth0/logout";
 
@@ -18,7 +17,7 @@ function NavBar() {
   return (
     <Nav>
       <Title to="/">
-        Sick Spots
+        SickSpots
         <Logo />
       </Title>
       <BurgerButton
@@ -28,13 +27,13 @@ function NavBar() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <IconContext.Provider
-          value={{
-            size: "1.25rem",
-          }}
-        >
-          <FcMenu />
-        </IconContext.Provider>
+        <Hamburger
+          label="Show menu"
+          color="#4FD1C5"
+          easing="ease-in"
+          hideOutline={true}
+          rounded
+        />
       </BurgerButton>
       <MobileMenu id="collapseMenu">
         <MobileWrapper>

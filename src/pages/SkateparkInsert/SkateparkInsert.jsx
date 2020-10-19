@@ -7,7 +7,7 @@ import {
   // PageWrapper,
   // Label,
   InputText,
-  Button,
+  InsertButton,
   CancelButton,
 } from "./styles";
 
@@ -189,8 +189,10 @@ class SkateparkInsert extends Component {
               onChange={this.handleChangeInputImage}
             />
 
-            <Button onClick={this.handleIncludeSkatepark}>Add Skatepark</Button>
-            <CancelButton href={"/"}>Cancel</CancelButton>
+            <InsertButton onClick={this.handleIncludeSkatepark}>
+              Add Skatepark
+            </InsertButton>
+            <CancelButton to="/">Cancel</CancelButton>
           </Col>
           <Col>
             <p>Add SVG Animation</p>

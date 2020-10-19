@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import api from "../../api";
 
-import { UpdateSkatepark, DeleteSkatepark } from "../../components/utils";
+import { EditSkatepark, DeleteSkatepark } from "../../components/utils";
 import { Details } from "../../components/Cards";
 
 import { Wrapper, Row } from "../styles";
@@ -51,7 +51,7 @@ class SkateparkDetail extends Component {
             className="col-md-12"
             style={{ padding: `.25em`, textAlign: `center` }}
           >
-            <UpdateSkatepark {...this.state} />
+            <EditSkatepark {...this.state} />
             <DeleteSkatepark {...this.state} />
           </div>
         </Row>

@@ -1,27 +1,17 @@
 import React, { Component } from "react";
 import api from "../../../api";
 import { notifyDeleteSuccess } from "../Notifications";
-import { Update, Delete, Details } from "./styles";
+import { Edit, Delete, Details } from "./styles";
 
-class UpdateSkatepark extends Component {
+class EditSkatepark extends Component {
   updateUser = () => {
     window.location.href = `/skateparks/update/${this.props.id}`;
   };
 
   render() {
-    return <Update onClick={this.updateUser}>Edit</Update>;
+    return <Edit onClick={this.updateUser}>Edit</Edit>;
   }
 }
-class SkateparkDetail extends Component {
-  updateUser = () => {
-    window.location.href = `/skateparks/details/${this.props.id}`;
-  };
-
-  render() {
-    return <Details onClick={this.updateUser}>{this.props.children}</Details>;
-  }
-}
-
 class DeleteSkatepark extends Component {
   deleteUser = () => {
     if (window.confirm(`Permanently delete ${this.props.name}?`)) {
@@ -34,5 +24,14 @@ class DeleteSkatepark extends Component {
     return <Delete onClick={this.deleteUser}>Delete</Delete>;
   }
 }
+class SkateparkDetail extends Component {
+  updateUser = () => {
+    window.location.href = `/skateparks/details/${this.props.id}`;
+  };
 
-export { UpdateSkatepark, DeleteSkatepark, SkateparkDetail };
+  render() {
+    return <Details onClick={this.updateUser}>{this.props.children}</Details>;
+  }
+}
+
+export { EditSkatepark, DeleteSkatepark, SkateparkDetail };

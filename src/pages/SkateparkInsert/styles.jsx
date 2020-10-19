@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Title = styled.h1.attrs({ className: "m-2" })`
   text-transform: Capitalize;
@@ -16,20 +17,35 @@ export const Label = styled.label.attrs({
 })``;
 
 export const InputText = styled.input.attrs({
-  className: "form-control m-1",
+  className: "form-control my-2",
 })`
   border: 0;
   border-radius: 3px;
   background-color: #272d2e;
 `;
 
-export const Button = styled.button.attrs({
-  className: `btn btn-primary m-1`,
-})``;
-
-export const CancelButton = styled.a.attrs({
-  className: `btn btn-danger m-2`,
-})``;
+export const InsertButton = styled(Link).attrs({
+  className: "btn btn-primary btn-block btn-dark p-1 my-3",
+  type: "button",
+})`
+  border-radius: 5px;
+  display: block;
+  background-color: #404549;
+  border-color: #404549;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`;
+export const CancelButton = styled(Link).attrs({
+  className: "btn btn-primary btn-block btn-danger p-1 my-3",
+  type: "button",
+})`
+  border-radius: 5px;
+  display: block;
+  ${"" /* background-color: #404549; */}
+  ${"" /* border-color: #404549; */}
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`;
 
 // export const Wrapper = styled.div.attrs({
 //   className: "px-3 py-4",

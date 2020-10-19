@@ -4,17 +4,13 @@ import {
   notifyCreateSuccess,
 } from "./Notifications";
 
-import {
-  UpdateSkatepark,
-  DeleteSkatepark,
-  SkateparkDetail,
-} from "./UserActions";
+import { EditSkatepark, DeleteSkatepark, SkateparkDetail } from "./UserActions";
 
 export {
   notifyDeleteSuccess,
   notifyUpdateSuccess,
   notifyCreateSuccess,
-  UpdateSkatepark,
+  EditSkatepark,
   DeleteSkatepark,
   SkateparkDetail,
 };

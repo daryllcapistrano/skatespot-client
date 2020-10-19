@@ -57,7 +57,7 @@ const Profile = () => {
         borderTop: `2px solid #1e2225`,
       }}
     >
-      <p>user is not logged in</p>
+      <p>no user logged in</p>
     </div>
   );
 };
