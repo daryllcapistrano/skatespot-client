@@ -1,8 +1,7 @@
 import React from "react";
 import Logo from "../Logo";
 import { Rotate as Hamburger } from "hamburger-react";
-import LoginButton from "../Auth0/login";
-import LogoutButton from "../Auth0/logout";
+import { LoginButton, LogoutButton } from "../Auth0/";
 
 import {
   Nav,

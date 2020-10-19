@@ -8,6 +8,11 @@ export const Wrapper = styled.div.attrs({
   height: auto;
 `;
 
+export const LogoWrapper = styled.div`
+  display flex;
+  justify-content: center;
+  padding: 1.25em`;
+
 export const InnerWrapper = styled.div.attrs({ className: "py-1 px-2 m-0" })`
   height: max-content;
 `;

@@ -1,6 +1,5 @@
 import React from "react";
 import { LogoWrapper } from "./styles";
-
 import { IconContext } from "react-icons";
 import { IoMdPin } from "react-icons/io";
 
